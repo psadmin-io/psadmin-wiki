@@ -1,4 +1,6 @@
-# Travis CI documentation style guide
+# psadmin.io Community Wiki Style Guide
+
+(Copied from the Travis CI documentation style guide - it's realy good.)
 
 ## Markdown and structure
 
