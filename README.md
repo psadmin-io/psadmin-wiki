@@ -1,6 +1,6 @@
-# About this repository [![Build Status](https://travis-ci.org/travis-ci/docs-travis-ci-com.svg?branch=master)](https://travis-ci.org/travis-ci/docs-travis-ci-com)
+# About this repository [![Build Status](https://travis-ci.org/psadmin-io/psadmin-wiki.svg?branch=master)](https://travis-ci.org/psadmin-io/psadmin-wiki)
 
-This is the documentation site for Travis CI! (<http://docs.travis-ci.com/>)
+This is the GitHub repo for the psadmin.io Community Wiki (<http://wiki.psadmin.io>)
 
 ## How to contribute
 
@@ -51,19 +51,3 @@ For documentation edits, Jekyll is sufficient.
 
 1. Open [localhost:4000](http://localhost:4000/) in your browser.
 
-#### Starting and inspecting edits with Puma
-
-For more programmatical PRs (such as handling webhooks notification
-via POST), Puma is necessary.
-
-1. Run Puma server:
-
-    ```sh-session
-    $ ./bin/puma
-    ```
-
-1. Open [localhost:9292](http://localhost:9292/) in your browser.
-
-## License
-
-Distributed under the [MIT license](https://opensource.org/licenses/MIT); the same as other Travis CI projects.

@@ -1,7 +1,7 @@
 title: "psadmin.io Wiki"
 email: "podcast@psadmin.io"
 url: "https://wiki.psadmin.io"
-docs_github: "https://github.com/psadmin-io/wiki"
+docs_github: "https://github.com/psadmin-io/psadmin-wiki"
 exclude: [bin, CNAME, Gemfile, Gemfile.lock, README.md, slate, vendor, '*.erb']
 markdown: kramdown
 permalink: :title
@@ -18,3 +18,5 @@ whitelist:
   - jekyll-redirect-from
 sass:
   sass_dir: assets/stylesheets
+gist:
+  noscript: false
