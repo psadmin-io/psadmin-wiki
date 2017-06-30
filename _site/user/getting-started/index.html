@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started - psadmin.io Wiki</title>
+<link rel="stylesheet" href="/assets/stylesheets/main.css">
+<link rel="alternate" type="application/rss+xml" title="psadmin.io Wiki Build Updates" href="http://wiki.psadmin.io/feed.build-env-updates.xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+<script src="/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/prism.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-64254497-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <img alt="psadmin.io logo" src="/images/psadmin_io_white_1440.png" width="200">
+</h1>
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="http://psadmin.io">Home</a></li>
+        <li><a href="http://psadmin.io/blog">Blog</a></li>
+        <li><a href="http://psadmin.io/category/podcast">Pocast</a></li>
+        <li><a href="http://psadmin.io/community">Community</a></li>
+        <li><a href="http://psadmin.io/courses">Courses</a></li>
+        <li><a href="http://psadmin.io/tools">Tools</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> 
+    <div class="searchbox">
+      <form>
+        <input type="text" id="st-search-input" class="searchbox-input" placeholder="Search the docs" />
+      </form>
+      <script type="text/javascript">
+      var Swiftype = window.Swiftype || {};
+        (function() {
+          Swiftype.key = 'tXvDDzd4fNTBnLvxfEyx';
+
+      Swiftype.searchSearchFields = {
+            "page": ["title, body, tags"]
+          };
+          Swiftype.autocompleteSearchFields = {
+            "page": ["title, body, tags"]
+          };
+          /** DO NOT EDIT BELOW THIS LINE **/
+          var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+          script.src = "//swiftype.com/embed.js";
+          var entry = document.getElementsByTagName('script')[0];
+          document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+        }());
+      </script>
+    </div> -->
+  </div>
+
+  <section class="sidebar-navigation">
+    <nav>
+      <h3>Getting Started</h3>
+      <ul>
+        <li><a href="/user/getting-started/">Getting started</a></li>
+      </ul>
+
+      <h3>PeopleTools</h3>
+      <ul>
+      </ul>
+      <h3>Database</h3>
+      <ul>
+      </ul>
+
+      <h3>Middleware</h3>
+      <ul>
+      </ul>
+
+      <h3>PeopleSoft Cloud Architecture</h3>
+      <ul>
+        <li class="is-overview"><a href="/user/pca/">Overview</a></li>
+        
+        <li><a href="/user/pca/sample_yaml/">Sample psft_customizations.yaml</a></li>
+        
+      </ul>
+
+      <h3>Server Administration</h3>
+      <ul>
+      </ul>
+
+    </nav>
+  </section>
+
+  <section class="sidebar-notice">
+    <p>This documentation site is open source.
+      The <a href="https://github.com/psadmin-io/wiki">README in our Git repository</a> explains how to contribute.</p>
+  </section>
+
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main" data-swiftype-index='true'>
+          
+            <aside class="improve-page"><a href="https://github.com/psadmin-io/wikiedit/master/user/getting-started.md" target="_blank" title="Edit this page on GitHub" class="button-pen" data-proofer-ignore>Improve this page on GitHub</a></aside>
+            <h1 class="title">Getting started</h1>
+          
+          <p>The very short guide to using Travis CI with your GitHub hosted code repository. If you’re new to continuous integration or would like some more information on what Travis CI does, start with <a href="/user/for-beginners">Travis CI for Complete Beginners</a> instead.</p>
+
+<div id="toc"></div>
+
+<h2 id="to-get-started-with-travis-ci">To get started with Travis CI</h2>
+
+<p>You’ll need a GitHub account with admin access to at least one repository, and ideally you’ll already have a working build script that you run manually.</p>
+
+<ol>
+  <li>
+    <p><a href="https://travis-ci.org/auth">Sign in to Travis CI</a> with your GitHub account, accepting the GitHub <a href="/user/github-oauth-scopes">access permissions confirmation</a>.</p>
+  </li>
+  <li>
+    <p>Once you’re signed in, and we’ve synchronized your GitHub repositories, go to your <a href="https://travis-ci.org/profile">profile page</a> and enable Travis CI for the <em>open source</em> repository you want to build. If you want to build a private repository, sign in to <a href="https://travis-ci.com/profile">Travis CI for private repositories</a> instead.</p>
+  </li>
+  <li>
+    <p>Add a <code class="highlighter-rouge">.travis.yml</code> file to your repository to tell Travis CI what to build.</p>
+
+    <p>This example tells Travis CI that this is a Ruby project, so unless you change the default, Travis CI uses <code class="highlighter-rouge">bundle install</code> to <a href="/user/customizing-the-build/#Customizing-the-Installation-Step">install dependencies</a>, and <code class="highlighter-rouge">rake</code> to build it.</p>
+
+    <p>Travis CI tests this project against Ruby 2.2 and the latest versions of JRuby and Rubinius, which can all pass or fail independently.</p>
+
+    <div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">ruby</span>
+<span class="s">rvm</span><span class="pi">:</span>
+ <span class="pi">-</span> <span class="s">2.2</span>
+ <span class="pi">-</span> <span class="s">jruby</span>
+ <span class="pi">-</span> <span class="s">rbx-2</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Add the <code class="highlighter-rouge">.travis.yml</code> file to git, commit and push, to trigger a Travis CI build:</p>
+
+    <blockquote>
+      <p>Travis only runs builds on the commits you push <em>after</em> you’ve enabled the repository in Travis CI.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Check the <a href="https://travis-ci.org/">build status</a> page to see if your build <a href="/user/customizing-the-build/#Breaking-the-Build">passes or fails</a>, according to the return status of the build command.</p>
+  </li>
+</ol>
+
+<h2 id="selecting-a-programming-language">Selecting a programming language</h2>
+
+<p>Use one of these common languages:</p>
+
+<div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">ruby</span>
+</code></pre>
+</div>
+
+<div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">java</span>
+</code></pre>
+</div>
+
+<div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">node_js</span>
+</code></pre>
+</div>
+
+<div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">python</span>
+</code></pre>
+</div>
+
+<div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">language</span><span class="pi">:</span> <span class="s">php</span>
+</code></pre>
+</div>
+
+<p>Or pick one from the <a href="/user/languages/">full list</a>.</p>
+
+<h2 id="selecting-infrastructure-optional">Selecting infrastructure (optional)</h2>
+
+<p>The most straightforward way to determine what infrastructure your build runs on
+is to set the <code class="highlighter-rouge">language</code>. If you do this your build runs on the default
+infrastructure (with a few exceptions), which is Container Based Ubuntu 12.04.
+You can explicitly select the default infrastructure by adding <code class="highlighter-rouge">sudo: false</code> to your <code class="highlighter-rouge">.travis.yml</code>.</p>
+
+<ul>
+  <li>
+    <p>If you need a more up-to-date version of Ubuntu on the same infrastructure, use
+the beta of Ubuntu Linux Trusty 14.04:</p>
+
+    <div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code> <span class="s">sudo</span><span class="pi">:</span> <span class="s">false</span>
+ <span class="s">dist</span><span class="pi">:</span> <span class="s">trusty</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>If you need a more customizable environment running in a virtual machine, use the Sudo
+Enabled infrastructure:</p>
+
+    <div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">sudo</span><span class="pi">:</span> <span class="s">enabled</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Sudo Enabled infrastructure also has a beta of a more up-to-date Ubuntu Linux
+Trusty 14.04:</p>
+
+    <div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">sudo</span><span class="pi">:</span> <span class="s">enabled</span>
+<span class="s">dist</span><span class="pi">:</span> <span class="s">trusty</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>If you have tests that need to run on macOS, or your project uses Swift or
+Objective-C, use our OS X environment:</p>
+
+    <div data-file=".travis.yml" class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">os</span><span class="pi">:</span> <span class="s">osx</span>
+</code></pre>
+    </div>
+
+    <blockquote>
+      <p>You do <em>not</em> necessarily need to use OS X if you develop on a Mac, only if
+you need Swift, Objective-C or other macOS software.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="more-than-running-tests">More than running tests</h2>
+
+<p>Travis CI isn’t just for running tests, there are many others things you can do with your code:</p>
+
+<ul>
+  <li>deploy to <a href="/user/deployment/pages/">GitHub pages</a></li>
+  <li>run apps on <a href="/user/deployment/heroku/">Heroku</a></li>
+  <li>upload <a href="/user/deployment/rubygems/">RubyGems</a></li>
+  <li>send <a href="/user/notifications/">notifications</a></li>
+</ul>
+
+<h2 id="further-reading">Further Reading</h2>
+
+<p>Read more about</p>
+
+<ul>
+  <li><a href="/user/customizing-the-build">customizing your build</a></li>
+  <li><a href="/user/best-practices-security/">security best practices</a></li>
+  <li><a href="/user/build-stages/">build stages</a></li>
+  <li><a href="/user/customizing-the-build/#Build-Matrix">build matrixes</a></li>
+  <li><a href="/user/installing-dependencies">installing dependencies</a></li>
+  <li><a href="/user/database-setup/">setting up databases</a></li>
+</ul>
+
+        </main>
+      </div><!-- /#content -->
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>
