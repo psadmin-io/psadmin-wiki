@@ -1,0 +1,894 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample psft_customizations.yaml - psadmin.io Wiki</title>
+<link rel="stylesheet" href="/assets/stylesheets/main.css">
+<link rel="alternate" type="application/rss+xml" title="psadmin.io Wiki Build Updates" href="http://wiki.psadmin.io/feed.build-env-updates.xml">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+<script src="/assets/javascripts/site.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/main.js" type="text/javascript" charset="utf-8" defer></script>
+<script src="/assets/javascripts/prism.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-64254497-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="top">
+  <div class="row topbar">
+    <h1 id="logo" class="logo">
+  <img alt="psadmin.io logo" src="/images/psadmin_io_white_1440.png" width="200">
+</h1>
+    <nav>
+      <ul id="navigation" class="navigation">
+        <li><a href="http://psadmin.io">Home</a></li>
+        <li><a href="http://psadmin.io/blog">Blog</a></li>
+        <li><a href="http://psadmin.io/category/podcast">Pocast</a></li>
+        <li><a href="http://psadmin.io/community">Community</a></li>
+        <li><a href="http://psadmin.io/courses">Courses</a></li>
+        <li><a href="http://psadmin.io/tools">Tools</a></li>
+        <li class="toggle"><button type="button" id="toggle-menu" class="button--teal">Menu</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+      <div id="content" class="row">
+
+        <div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> 
+    <div class="searchbox">
+      <form>
+        <input type="text" id="st-search-input" class="searchbox-input" placeholder="Search the docs" />
+      </form>
+      <script type="text/javascript">
+      var Swiftype = window.Swiftype || {};
+        (function() {
+          Swiftype.key = 'tXvDDzd4fNTBnLvxfEyx';
+
+      Swiftype.searchSearchFields = {
+            "page": ["title, body, tags"]
+          };
+          Swiftype.autocompleteSearchFields = {
+            "page": ["title, body, tags"]
+          };
+          /** DO NOT EDIT BELOW THIS LINE **/
+          var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+          script.src = "//swiftype.com/embed.js";
+          var entry = document.getElementsByTagName('script')[0];
+          document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+        }());
+      </script>
+    </div> -->
+  </div>
+
+  <section class="sidebar-navigation">
+    <nav>
+      <h3>Getting Started</h3>
+      <ul>
+        <li><a href="/user/getting-started/">Getting started</a></li>
+      </ul>
+
+      <h3>PeopleTools</h3>
+      <ul>
+      </ul>
+      <h3>Database</h3>
+      <ul>
+      </ul>
+
+      <h3>Middleware</h3>
+      <ul>
+      </ul>
+
+      <h3>PeopleSoft Cloud Architecture</h3>
+      <ul>
+        <li class="is-overview"><a href="/user/pca/">Overview</a></li>
+        
+        <li><a href="/user/pca/sample_yaml/">Sample psft_customizations.yaml</a></li>
+        
+      </ul>
+
+      <h3>Server Administration</h3>
+      <ul>
+      </ul>
+
+    </nav>
+  </section>
+
+  <section class="sidebar-notice">
+    <p>This documentation site is open source.
+      The <a href="https://github.com/psadmin-io/wiki">README in our Git repository</a> explains how to contribute.</p>
+  </section>
+
+</div><!-- /#sidebar -->
+
+
+        <main id="main" class="main" data-swiftype-index='true'>
+          
+            <aside class="improve-page"><a href="https://github.com/psadmin-io/wikiedit/master/user/pca/sample_yaml.md" target="_blank" title="Edit this page on GitHub" class="button-pen" data-proofer-ignore>Improve this page on GitHub</a></aside>
+            <h1 class="title">Sample psft_customizations.yaml</h1>
+          
+          <p>Below is a sample <code class="highlighter-rouge">psft_customizations.yaml</code> file to give you an idea of how to define configuration for the DPK.</p>
+
+<noscript><pre>---
+region:                 DEV
+application:            HR
+server_type:            webApp
+ensure:                 present
+env_type:               midtier
+tools_version:          8.55.13
+domain_type:            all
+
+peoplesoft_base:        e:/psoft
+# Normalized Path for env_settings: section in app/prcs_domain_list
+peoplesoft_base_norm:   &quot;e:\\psoft&quot;
+unicode_db:             false
+
+ps_home_location:       &quot;%{hiera(&#39;peoplesoft_base&#39;)}/pt-8.55.13&quot;
+oracle_client_location: e:/oracle/product/12.1.0.2/client_1/
+jdk_location:           e:/java/jdk7
+weblogic_location:      e:/oracle/weblogic
+tuxedo_location:        e:/oracle/tuxedo
+
+# Custom values for EMF Manifest
+EMFHubURL:              http://emf:16513/PSEMHUB/hub
+EMFagentport:           5284
+crawl_dir:              &quot;%{hiera(&#39;peoplesoft_base&#39;)}|%{hiera(&#39;oracle_client_location&#39;)}|%{hiera(&#39;jdk_location&#39;)}&quot;
+
+domain_user:            &#39;development\user&#39;
+domain_password:        &#39;password&#39;
+db_server:              db001.psadmin.io
+db_port:                1521
+appserv_user:           PSAPPS
+appserv_user_pwd:       &#39;password&#39;
+
+connect_id:             people
+connect_pwd:            peop1e
+
+appserver_template:     developer
+pia_gateway_user:       administrator
+pia_auth_token_domain:  &#39;.psadmin.io&#39;
+pia_webprofile_name:    DEV
+report_repository_dir:  &#39;//psreports/psreports&#39;
+
+DMO:                    HR92DMO
+DMO_pia:                hr92dmo
+DMO_pia_psserver_list:  &#39;localapp:10110&#39;
+DMO_domain_conn_pwd:    &#39;pass&#39;
+
+DEV1:                   HR92DEV1
+DEV1_pia:               hr92dev1
+DEV1_pia_psserver_list: &#39;localapp:10310&#39;
+DEV1_domain_conn_pwd:   &#39;pass&#39;
+
+DEV2:                   HR92DEV2
+DEV2_pia:               hr92dev2
+DEV2_pia_psserver_list: &#39;localapp:10610&#39;
+DEV2_domain_conn_pwd:   &#39;pass&#39;
+
+TST:                    HR92TST
+TST_pia:                hr92tst
+TST_pia_psserver_list:  &#39;localapp:10410&#39;
+TST_domain_conn_pwd:    &#39;pass&#39;
+
+help_uri:               pt855pbh1
+tns_dir:                &quot;%{hiera(&#39;db_location&#39;)}&quot;
+tns_admin_list:
+  &quot;%{hiera(&#39;DMO&#39;)}&quot;:
+    db_host:            &quot;%{hiera(&#39;db_server&#39;)}&quot;
+    db_port:            &quot;%{hiera(&#39;db_port&#39;)}&quot;
+    db_protocol:        TCP
+    db_service_name:    &quot;%{hiera(&#39;DMO&#39;)}.psadmin.io&quot;
+  &quot;%{hiera(&#39;DEV1&#39;)}&quot;:
+    db_host:            &quot;%{hiera(&#39;db_server&#39;)}&quot;
+    db_port:            &quot;%{hiera(&#39;db_port&#39;)}&quot;
+    db_protocol:        TCP
+    db_service_name:    &quot;%{hiera(&#39;DEV1&#39;)}.psadmin.io&quot;
+  &quot;%{hiera(&#39;DEV2&#39;)}&quot;:
+    db_host:            &quot;%{hiera(&#39;db_server&#39;)}&quot;
+    db_port:            &quot;%{hiera(&#39;db_port&#39;)}&quot;
+    db_protocol:        TCP
+    db_service_name:    &quot;%{hiera(&#39;DEV2&#39;)}.psadmin.io&quot;
+  &quot;%{hiera(&#39;TST&#39;)}&quot;:
+    db_host:            &quot;%{hiera(&#39;db_server&#39;)}&quot;
+    db_port:            &quot;%{hiera(&#39;db_port&#39;)}&quot;
+    db_protocol:        TCP
+    db_service_name:    &quot;%{hiera(&#39;TST&#39;)}.psadmin.io&quot;
+
+appserver_domain_list:
+  &quot;%{hiera(&#39;DMO&#39;)}&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DMO&#39;)}-8.55.13&quot;
+    ps_cust_home_dir:   &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DMO&#39;)}&quot;
+    ps_app_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/hr-app-9.2.008&quot;
+    template_type:      &quot;%{hiera(&#39;appserver_template&#39;)}&quot;
+    # Nightly Cache Clear is for a custom Manifest to create a Schedule Task for the domain
+    # &quot;once&quot; or &quot;daily&quot;
+    nightly_cache_clear: once
+    nightly_cache_clear_enabled: true
+    nightly_cache_clear_time: &#39;04:00&#39;
+    nightly_cache_clear_date: &#39;2017-01-31&#39;
+
+    db_settings:
+      db_name:          &quot;%{hiera(&#39;DMO&#39;)}&quot;
+      db_type:          &quot;%{hiera(&#39;db_platform&#39;)}&quot;
+      db_opr_id:        &quot;%{hiera(&#39;appserv_user&#39;)}&quot;
+      db_opr_pwd:       &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+      db_connect_id:    &quot;%{hiera(&#39;connect_id&#39;)}&quot;
+      db_connect_pwd:   &quot;%{hiera(&#39;connect_pwd&#39;)}&quot;
+
+    # All of your psappsrv.cfg configuration goes here
+    config_settings:
+      Domain Settings/Domain ID:    &quot;%{hiera(&#39;DMO&#39;)}&quot;
+      PSAPPSRV/Min Instances:       2
+      PSAPPSRV/Max Instances:       3
+      PSAPPSRV/Max Fetch Size:      15000
+      PSAPPSRV/Allowed Consec Service Failures: 2
+      PSSAMSRV/Recycle Count:       100000
+      PSSAMSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/Min Instances:       2
+      PSQRYSRV/Max Instances:       2
+      PSQRYSRV/Service Timeout:     1200
+      PSQRYSRV/Max Fetch Size:      20000
+      PSQRYSRV/Recycle Count:       100
+      PSQRYSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/ProcessRestartMemoryLimit:  512
+      PSQRYSRV/JavaVM Options:      &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms32m -Xmx128m&#39;
+      Trace/TraceSqlMask:           31
+      Trace/TracePCMask:            4044
+      Trace/TracePPRMask:           0
+      Trace/TracePIAMask:           0
+      Trace/TraceAnalytic:          0
+      Trace/TraceAnalyticMask:      0
+      Security/DomainConnectionPwd: &quot;%{hiera(&#39;DMO_domain_conn_pwd&#39;)}&quot;
+      JOLT Listener/Port:           10110
+      JOLT Listener/Address:        0.0.0.0
+      JOLT Listener/Min Handlers:   2
+      JOLT Listener/Max Handlers:   3
+      Workstation Listener/Port:    10100
+      Domain Settings/Allow Dynamic Changes:  Y
+      Domain Settings/ProcessRestartMemoryLimit:  512
+      SMTP Settings/SMTPServer:     mail.psadmin.io
+      SMTP Settings/SMTPPort:       25
+      SMTP Settings/SMTPSourceMachine: &#39;%PS_MACH%&#39;
+      SMTP Settings/SMTPSender:     &quot;%{hiera(&#39;DMO&#39;)}@psadmin.io&quot;
+      PSTOOLS/JavaVM Options:       &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms32m -Xmx128m&#39;   
+      PSTOOLS/Remote Administration Port: 10160      
+      PSRENSRV/default_http_port:   10140
+      PSRENSRV/default_https_port:  10150
+      PSRENSRV/default_auth_token:  &#39;psadmin.io&#39;
+      # ;------------------------------------------------------------------------
+      # ; Doc ID: 2175273.1
+      # ; BUG 23214026 - MGR UPDATE PROTOCOL TRIGGERS UPDATE OF ALL USER PROFILES
+      # ;------------------------------------------------------------------------
+      Cache Settings/MgrAutoLock:   N       
+
+    feature_settings:
+      PUBSUB:           &quot;Yes&quot;
+      QUICKSRV:         &quot;No&quot;
+      QUERYSRV:         &quot;No&quot;
+      JOLT:             &quot;Yes&quot;
+      JRAD:             &quot;No&quot;
+      WSL:              &quot;No&quot;
+      DBGSRV:           &quot;No&quot;
+      RENSRV:           &quot;No&quot;
+      MCF:              &quot;No&quot;
+      PPM:              &quot;No&quot;
+      PSPPMSRV:         &quot;No&quot;
+      ANALYTICSRV:      &quot;No&quot;
+      SERVER_EVENTS:    &quot;No&quot;
+      DOMAIN_GW:        &quot;No&quot;
+
+    # This section will set environment variables in psadmin
+    # Windows required normalized paths - the DPK doesn&#39;t flip / to \ for this section
+    env_settings:
+      PS_HOME:          &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\pt-8.55.13&quot;     
+      PS_APP_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\hr-app-9.2.008&quot;
+      PS_CUST_HOME:     &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DMO&#39;)}&quot;
+      PS_CFG_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DMO&#39;)}-8.55.13&quot;
+      PS_FILEDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DMO&#39;)}\\files&quot;
+      PS_SERVDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DMO&#39;)}-8.55.13\\files&quot;
+      TEMP:             &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DMO&#39;)}\\temp&quot;
+      TMP:              &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DMO&#39;)}\\temp&quot;
+
+  &quot;%{hiera(&#39;DEV1&#39;)}&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DEV1&#39;)}-8.55.13&quot;
+    ps_cust_home_dir:   &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DEV1&#39;)}&quot;
+    ps_app_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/hr-app-9.2.008&quot;
+    template_type:      &quot;%{hiera(&#39;appserver_template&#39;)}&quot;
+    # &quot;once&quot; or &quot;daily&quot;
+    nightly_cache_clear: once
+    nightly_cache_clear_enabled: true
+    nightly_cache_clear_time: &#39;04:00&#39;
+    nightly_cache_clear_date: &#39;2017-01-31&#39;
+
+    db_settings:
+      db_name:          &quot;%{hiera(&#39;DEV1&#39;)}&quot;
+      db_type:          &quot;%{hiera(&#39;db_platform&#39;)}&quot;
+      db_opr_id:        &quot;%{hiera(&#39;appserv_user&#39;)}&quot;
+      db_opr_pwd:       &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+      db_connect_id:    &quot;%{hiera(&#39;connect_id&#39;)}&quot;
+      db_connect_pwd:   &quot;%{hiera(&#39;connect_pwd&#39;)}&quot;
+
+    config_settings:
+      Domain Settings/Domain ID:    &quot;%{hiera(&#39;DEV1&#39;)}&quot;
+      PSAPPSRV/Min Instances:       3
+      PSAPPSRV/Max Instances:       3
+      PSAPPSRV/Max Fetch Size:      15000
+      PSAPPSRV/Allowed Consec Service Failures: 2
+      PSSAMSRV/Recycle Count:       100000
+      PSSAMSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/Min Instances:       2
+      PSQRYSRV/Max Instances:       2
+      PSQRYSRV/Service Timeout:     1200
+      PSQRYSRV/Max Fetch Size:      20000
+      PSQRYSRV/Recycle Count:       100
+      PSQRYSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/ProcessRestartMemoryLimit:  512
+      PSQRYSRV/JavaVM Options:      &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms128m -Xmx256m&#39;
+      Trace/TraceSqlMask:           31
+      Trace/TracePCMask:            4044
+      Trace/TracePPRMask:           0
+      Trace/TracePIAMask:           0
+      Trace/TraceAnalytic:          0
+      Trace/TraceAnalyticMask:      0
+      Security/DomainConnectionPwd: &quot;%{hiera(&#39;DEV1_domain_conn_pwd&#39;)}&quot;
+      JOLT Listener/Port:           10310
+      JOLT Listener/Address:        0.0.0.0
+      JOLT Listener/Min Handlers:   2
+      JOLT Listener/Max Handlers:   3
+      Workstation Listener/Port:    10300
+      Domain Settings/Allow Dynamic Changes:  Y
+      Domain Settings/ProcessRestartMemoryLimit:  512
+      SMTP Settings/SMTPServer:     mail.psadmin.io
+      SMTP Settings/SMTPPort:       25
+      SMTP Settings/SMTPSourceMachine: &#39;%PS_MACH%&#39;
+      SMTP Settings/SMTPSender:     &quot;%{hiera(&#39;DEV1&#39;)}@psadmin.io&quot;
+      PSTOOLS/JavaVM Options:       &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms32m -Xmx128m&#39;         
+      PSTOOLS/Remote Administration Port: 10360      
+      PSRENSRV/default_http_port:   10340
+      PSRENSRV/default_https_port:  10350
+      PSRENSRV/default_auth_token:  &#39;psadmin.io&#39;
+      # ;------------------------------------------------------------------------
+      # ; Doc ID: 2175273.1
+      # ; BUG 23214026 - MGR UPDATE PROTOCOL TRIGGERS UPDATE OF ALL USER PROFILES
+      # ;------------------------------------------------------------------------
+      Cache Settings/MgrAutoLock:   N       
+
+    feature_settings:
+      PUBSUB:           &quot;Yes&quot;
+      QUICKSRV:         &quot;No&quot;
+      QUERYSRV:         &quot;Yes&quot;
+      JOLT:             &quot;Yes&quot;
+      JRAD:             &quot;No&quot;
+      WSL:              &quot;Yes&quot;
+      DBGSRV:           &quot;No&quot;
+      RENSRV:           &quot;No&quot;
+      MCF:              &quot;No&quot;
+      PPM:              &quot;No&quot;
+      PSPPMSRV:         &quot;No&quot;
+      ANALYTICSRV:      &quot;No&quot;
+      SERVER_EVENTS:    &quot;No&quot;
+      DOMAIN_GW:        &quot;No&quot;
+
+    env_settings:
+      PS_HOME:          &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\pt-8.55.13&quot;     
+      PS_APP_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\hr-app-9.2.008&quot;
+      PS_CUST_HOME:     &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV1&#39;)}&quot;
+      PS_CFG_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV1&#39;)}-8.55.13&quot;
+      PS_FILEDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV1&#39;)}\\files&quot;
+      PS_SERVDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV1&#39;)}-8.55.13\\files&quot;
+      TEMP:             &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV1&#39;)}\\temp&quot;
+      TMP:              &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV1&#39;)}\\temp&quot;
+      
+  &quot;%{hiera(&#39;DEV2&#39;)}&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DEV2&#39;)}-8.55.13&quot;
+    ps_cust_home_dir:   &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DEV2&#39;)}&quot;
+    ps_app_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/hr-app-9.2.008&quot;
+    template_type:      &quot;%{hiera(&#39;appserver_template&#39;)}&quot;
+    # &quot;once&quot; or &quot;daily&quot;
+    nightly_cache_clear: once
+    nightly_cache_clear_enabled: true
+    nightly_cache_clear_time: &#39;04:00&#39;
+    nightly_cache_clear_date: &#39;2017-01-31&#39;
+
+    db_settings:
+      db_name:          &quot;%{hiera(&#39;DEV2&#39;)}&quot;
+      db_type:          &quot;%{hiera(&#39;db_platform&#39;)}&quot;
+      db_opr_id:        &quot;%{hiera(&#39;appserv_user&#39;)}&quot;
+      db_opr_pwd:       &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+      db_connect_id:    &quot;%{hiera(&#39;connect_id&#39;)}&quot;
+      db_connect_pwd:   &quot;%{hiera(&#39;connect_pwd&#39;)}&quot;
+
+    config_settings:
+      Domain Settings/Domain ID:    &quot;%{hiera(&#39;DEV2&#39;)}&quot;
+      PSAPPSRV/Min Instances:       3
+      PSAPPSRV/Max Instances:       3
+      PSAPPSRV/Max Fetch Size:      15000
+      PSAPPSRV/Allowed Consec Service Failures: 2
+      PSSAMSRV/Recycle Count:       100000
+      PSSAMSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/Min Instances:       2
+      PSQRYSRV/Max Instances:       2
+      PSQRYSRV/Service Timeout:     1200
+      PSQRYSRV/Max Fetch Size:      20000
+      PSQRYSRV/Recycle Count:       100
+      PSQRYSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/ProcessRestartMemoryLimit:  512
+      PSQRYSRV/JavaVM Options:      &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms128m -Xmx256m&#39;
+      Trace/TraceSqlMask:           31
+      Trace/TracePCMask:            4044
+      Trace/TracePPRMask:           0
+      Trace/TracePIAMask:           0
+      Trace/TraceAnalytic:          0
+      Trace/TraceAnalyticMask:      0
+      Security/DomainConnectionPwd: &quot;%{hiera(&#39;DEV2_domain_conn_pwd&#39;)}&quot;
+      JOLT Listener/Port:           10610
+      JOLT Listener/Address:        0.0.0.0
+      JOLT Listener/Min Handlers:   2
+      JOLT Listener/Max Handlers:   3
+      Workstation Listener/Port:    10600
+      Domain Settings/Allow Dynamic Changes:  Y
+      Domain Settings/ProcessRestartMemoryLimit:  512
+      SMTP Settings/SMTPServer:     mail.psadmin.io
+      SMTP Settings/SMTPPort:       25
+      SMTP Settings/SMTPSourceMachine: &#39;%PS_MACH%&#39;
+      SMTP Settings/SMTPSender:     &quot;%{hiera(&#39;DEV2&#39;)}@psadmin.io&quot;
+      PSTOOLS/JavaVM Options:       &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms32m -Xmx128m&#39;         
+      PSTOOLS/Remote Administration Port: 10660      
+      PSRENSRV/default_http_port:   10640
+      PSRENSRV/default_https_port:  10650
+      PSRENSRV/default_auth_token:  &#39;psadmin.io&#39;
+      # ;------------------------------------------------------------------------
+      # ; Doc ID: 2175273.1
+      # ; BUG 23214026 - MGR UPDATE PROTOCOL TRIGGERS UPDATE OF ALL USER PROFILES
+      # ;------------------------------------------------------------------------
+      Cache Settings/MgrAutoLock:   N       
+
+    feature_settings:
+      PUBSUB:           &quot;Yes&quot;
+      QUICKSRV:         &quot;No&quot;
+      QUERYSRV:         &quot;Yes&quot;
+      JOLT:             &quot;Yes&quot;
+      JRAD:             &quot;No&quot;
+      WSL:              &quot;Yes&quot;
+      DBGSRV:           &quot;No&quot;
+      RENSRV:           &quot;No&quot;
+      MCF:              &quot;No&quot;
+      PPM:              &quot;No&quot;
+      PSPPMSRV:         &quot;No&quot;
+      ANALYTICSRV:      &quot;No&quot;
+      SERVER_EVENTS:    &quot;No&quot;
+      DOMAIN_GW:        &quot;No&quot;
+
+    env_settings:
+      PS_HOME:          &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\pt-8.55.13&quot;     
+      PS_APP_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\hr-app-9.2.008&quot;
+      PS_CUST_HOME:     &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV2&#39;)}&quot;
+      PS_CFG_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV2&#39;)}-8.55.13&quot;
+      PS_FILEDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV2&#39;)}\\files&quot;
+      PS_SERVDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV2&#39;)}-8.55.13\\files&quot;
+      TEMP:             &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV2&#39;)}\\temp&quot;
+      TMP:              &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;DEV2&#39;)}\\temp&quot;
+
+  &quot;%{hiera(&#39;TST&#39;)}&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;TST&#39;)}-8.55.13&quot;
+    ps_cust_home_dir:   &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;TST&#39;)}&quot;
+    ps_app_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/hr-app-9.2.008&quot;
+    template_type:      &#39;developer&#39;
+    # &quot;once&quot; or &quot;daily&quot;
+    nightly_cache_clear: once
+    nightly_cache_clear_enabled: true
+    nightly_cache_clear_time: &#39;04:00&#39;
+    nightly_cache_clear_date: &#39;2017-01-31&#39;
+
+    db_settings:
+      db_name:          &quot;%{hiera(&#39;TST&#39;)}&quot;
+      db_type:          &quot;%{hiera(&#39;db_platform&#39;)}&quot;
+      db_opr_id:        &quot;%{hiera(&#39;appserv_user&#39;)}&quot;
+      db_opr_pwd:       &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+      db_connect_id:    &quot;%{hiera(&#39;connect_id&#39;)}&quot;
+      db_connect_pwd:   &quot;%{hiera(&#39;connect_pwd&#39;)}&quot;
+
+    config_settings:
+      Domain Settings/Domain ID:    &quot;%{hiera(&#39;TST&#39;)}&quot;
+      PSAPPSRV/Min Instances:       3
+      PSAPPSRV/Max Instances:       3
+      PSAPPSRV/Max Fetch Size:      15000
+      PSAPPSRV/Allowed Consec Service Failures: 2
+      PSSAMSRV/Recycle Count:       100000
+      PSSAMSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/Min Instances:       2
+      PSQRYSRV/Max Instances:       2
+      PSQRYSRV/Service Timeout:     1200
+      PSQRYSRV/Max Fetch Size:      20000
+      PSQRYSRV/Recycle Count:       100
+      PSQRYSRV/Allowed Consec Service Failures: 2
+      PSQRYSRV/ProcessRestartMemoryLimit:  512
+      PSQRYSRV/JavaVM Options:      &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms128m -Xmx256m&#39;
+      Trace/TraceSqlMask:           31
+      Trace/TracePCMask:            4044
+      Trace/TracePPRMask:           0
+      Trace/TracePIAMask:           0
+      Trace/TraceAnalytic:          0
+      Trace/TraceAnalyticMask:      0
+      Security/DomainConnectionPwd: &quot;%{hiera(&#39;TST_domain_conn_pwd&#39;)}&quot;
+      JOLT Listener/Port:           10410
+      JOLT Listener/Address:        0.0.0.0
+      JOLT Listener/Min Handlers:   2
+      JOLT Listener/Max Handlers:   3
+      Workstation Listener/Port:    10400
+      Domain Settings/Allow Dynamic Changes:  Y
+      Domain Settings/ProcessRestartMemoryLimit:  512
+      SMTP Settings/SMTPServer:     mail.psadmin.io
+      SMTP Settings/SMTPPort:       25
+      SMTP Settings/SMTPSourceMachine: &#39;%PS_MACH%&#39;
+      SMTP Settings/SMTPSender:     &quot;%{hiera(&#39;TST&#39;)}@psadmin.io&quot;
+      PSTOOLS/JavaVM Options:       &#39;-Dxdo.ConfigFile=%PS_CFG_HOME%/appserv/xdo.cfg -Xms32m -Xmx128m&#39;         
+      PSTOOLS/Remote Administration Port: 10460      
+      PSRENSRV/default_http_port:   10440
+      PSRENSRV/default_https_port:  10450
+      PSRENSRV/default_auth_token:  &#39;psadmin.io&#39;
+      # ;------------------------------------------------------------------------
+      # ; Doc ID: 2175273.1
+      # ; BUG 23214026 - MGR UPDATE PROTOCOL TRIGGERS UPDATE OF ALL USER PROFILES
+      # ;------------------------------------------------------------------------
+      Cache Settings/MgrAutoLock:   N       
+
+    feature_settings:
+      PUBSUB:           &quot;Yes&quot;
+      QUICKSRV:         &quot;No&quot;
+      QUERYSRV:         &quot;Yes&quot;
+      JOLT:             &quot;Yes&quot;
+      JRAD:             &quot;No&quot;
+      WSL:              &quot;No&quot;
+      DBGSRV:           &quot;No&quot;
+      RENSRV:           &quot;No&quot;
+      MCF:              &quot;No&quot;
+      PPM:              &quot;No&quot;
+      PSPPMSRV:         &quot;No&quot;
+      ANALYTICSRV:      &quot;No&quot;
+      SERVER_EVENTS:    &quot;No&quot;
+      DOMAIN_GW:        &quot;No&quot;
+
+    env_settings:
+      PS_HOME:          &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\pt-8.55.13&quot;     
+      PS_APP_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\hr-app-9.2.008&quot;
+      PS_CUST_HOME:     &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;TST&#39;)}&quot;
+      PS_CFG_HOME:      &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;TST&#39;)}-8.55.13&quot;
+      PS_FILEDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;TST&#39;)}\\files&quot;
+      PS_SERVDIR:       &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;TST&#39;)}-8.55.13\\files&quot;
+      TEMP:             &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;TST&#39;)}\\temp&quot;
+      TMP:              &quot;%{hiera(&#39;peoplesoft_base_norm&#39;)}\\%{hiera(&#39;TST&#39;)}\\temp&quot;
+
+pia_domain_list:
+  &quot;%{hiera(&#39;DMO_pia&#39;)}-8.55.13&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DMO&#39;)}-8.55.13&quot;
+    gateway_user:       &quot;%{hiera(&#39;pia_gateway_user&#39;)}&quot;
+    gateway_user_pwd:   &#39;password&#39;
+    # Values used by a custom manifest
+    auth_token_domain:  &quot;%{hiera(&#39;pia_auth_token_domain&#39;)}&quot;
+    cookie_name:        &#39;DMO-PORTAL-JSESSIONID&#39;
+
+    webserver_settings:
+      webserver_type:           &quot;%{hiera(&#39;webserver_type&#39;)}&quot;
+      webserver_home:           &quot;%{hiera(&#39;weblogic_location&#39;)}&quot;
+      webserver_admin_user:     system
+      webserver_admin_user_pwd: &#39;password&#39;
+      webserver_admin_port:     10120
+      webserver_http_port:      10120
+      webserver_https_port:     10130
+
+    # This section will use WLST to configure the domain (config.xml)
+    config_settings:
+      Servers/PIA:
+        ListenAddress:          0.0.0.0
+      Servers/PIA/WebServer/PIA/WebServerLog/PIA: 
+        LoggingEnabled:         true
+        LogFileFormat:          extended
+        BufferSizeKB:           0
+        ELFFields:              &#39;date time cs-method cs-uri sc-status cs-username cs(user-agent) s-ip c-ip cs(X-Forwarded-For) time-taken bytes x-OPRIDLogField&#39;
+
+    site_list:
+      &quot;%{hiera(&#39;DMO_pia&#39;)}&quot;:
+        appserver_connections: &quot;%{hiera(&#39;DMO_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;DMO_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        PTWEBSERVER
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          # Custom value to overwrite the web profile - workaround for DPK not accepting custom web profile names
+          web_profile_name:    DEV
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        
+        # Custom section - a custom manifest will update the text.properties file
+        text_properties:
+          138:          COMET Demo
+          8998:         default
+          8999:         DEMO
+          9000:         &#39;http://hr-app-d3.psadmin.io:10120/psp/hr92dmo/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15120/psp/fs92dmo/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10120/psc/hr92dmo_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15120/psc/fs92dmo_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+      
+      &quot;%{hiera(&#39;DMO_pia&#39;)}_fp&quot;:
+        appserver_connections: &quot;%{hiera(&#39;DMO_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;DMO_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        FORGOT
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    FORGOTPASSWORD
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Demo
+          8998:         default
+          8999:         DEMO
+          9000:         &#39;http://hr-app-d3.psadmin.io:10120/psp/hr92dmo/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15120/psp/fs92dmo/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10120/psc/hr92dmo_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15120/psc/fs92dmo_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+  
+  &quot;%{hiera(&#39;DEV1_pia&#39;)}-8.55.13&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DEV1&#39;)}-8.55.13&quot;
+    gateway_user:       &quot;%{hiera(&#39;pia_gateway_user&#39;)}&quot;
+    gateway_user_pwd:   &#39;password&#39;
+    auth_token_domain:  &quot;%{hiera(&#39;pia_auth_token_domain&#39;)}&quot;
+    cookie_name:        &#39;HR-DEV1-PORTAL-JSESSIONID&#39;
+
+    webserver_settings:
+      webserver_type:           &quot;%{hiera(&#39;webserver_type&#39;)}&quot;
+      webserver_home:           &quot;%{hiera(&#39;weblogic_location&#39;)}&quot;
+      webserver_admin_user:     system
+      webserver_admin_user_pwd: &#39;password&#39;
+      webserver_admin_port:     10320
+      webserver_http_port:      10320
+      webserver_https_port:     10330
+
+    config_settings:
+      Servers/PIA:
+        ListenAddress:          0.0.0.0
+      Servers/PIA/WebServer/PIA/WebServerLog/PIA: 
+        LoggingEnabled:         true
+        LogFileFormat:          extended
+        BufferSizeKB:           0
+        ELFFields:              &#39;date time cs-method cs-uri sc-status cs-username cs(user-agent) s-ip c-ip cs(X-Forwarded-For) time-taken bytes x-OPRIDLogField&#39;
+
+    site_list:
+      &quot;%{hiera(&#39;DEV1_pia&#39;)}&quot;:
+        appserver_connections: &quot;%{hiera(&#39;DEV1_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;DEV1_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        PTWEBSERVER
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    COMET
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Development 1
+          8998:         success
+          8999:         DEVELOPMENT 1
+          9000:         &#39;http://hr-app-d3.psadmin.io:10320/psp/hr92dev1/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15320/psp/fs92dev1/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10320/psc/hr92dev1_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15320/psc/fs92dev1_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+
+      &quot;%{hiera(&#39;DEV1_pia&#39;)}_fp&quot;:
+        appserver_connections: &quot;%{hiera(&#39;DEV1_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;DEV1_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        FORGOT
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    FORGOTPASSWORD
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Development 1
+          8998:         success
+          8999:         DEVELOPMENT 1
+          9000:         &#39;http://hr-app-d3.psadmin.io:10320/psp/hr92dev1/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15320/psp/fs92dev1/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10320/psc/hr92dev1_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15320/psc/fs92dev1_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+                   
+  &quot;%{hiera(&#39;DEV2_pia&#39;)}-8.55.13&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;DEV2&#39;)}-8.55.13&quot;
+    gateway_user:       &quot;%{hiera(&#39;pia_gateway_user&#39;)}&quot;
+    gateway_user_pwd:   &#39;password&#39;
+    auth_token_domain:  &quot;%{hiera(&#39;pia_auth_token_domain&#39;)}&quot;
+    cookie_name:        &#39;HR-DEV2-PORTAL-JSESSIONID&#39;
+
+    webserver_settings:
+      webserver_type:           &quot;%{hiera(&#39;webserver_type&#39;)}&quot;
+      webserver_home:           &quot;%{hiera(&#39;weblogic_location&#39;)}&quot;
+      webserver_admin_user:     system
+      webserver_admin_user_pwd: &#39;password&#39;
+      webserver_admin_port:     10620
+      webserver_http_port:      10620
+      webserver_https_port:     10630
+
+    config_settings:
+      Servers/PIA:
+        ListenAddress:          0.0.0.0
+      Servers/PIA/WebServer/PIA/WebServerLog/PIA: 
+        LoggingEnabled:         true
+        LogFileFormat:          extended
+        BufferSizeKB:           0
+        ELFFields:              &#39;date time cs-method cs-uri sc-status cs-username cs(user-agent) s-ip c-ip cs(X-Forwarded-For) time-taken bytes x-OPRIDLogField&#39;
+
+    site_list:
+      &quot;%{hiera(&#39;DEV2_pia&#39;)}&quot;:
+        appserver_connections: &quot;%{hiera(&#39;DEV2_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;DEV2_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        PTWEBSERVER
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    COMET
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Development 2
+          8998:         success
+          8999:         DEVELOPMENT 2
+          9000:         &#39;http://hr-app-d3.psadmin.io:10620/psp/hr92dev2/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15620/psp/fs92dev2/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10620/psc/hr92dev2_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15620/psc/fs92dev2_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+
+      &quot;%{hiera(&#39;DEV2_pia&#39;)}_fp&quot;:
+        appserver_connections: &quot;%{hiera(&#39;DEV2_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;DEV2_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        FORGOT
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    FORGOTPASSWORD
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Development 2
+          8998:         success
+          8999:         DEVELOPMENT 2
+          9000:         &#39;http://hr-app-d3.psadmin.io:10620/psp/hr92dev2/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15620/psp/fs92dev2/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10620/psc/hr92dev2_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15620/psc/fs92dev2_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+
+  &quot;%{hiera(&#39;TST_pia&#39;)}-8.55.13&quot;:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/%{hiera(&#39;TST&#39;)}-8.55.13&quot;
+    gateway_user:       &quot;%{hiera(&#39;pia_gateway_user&#39;)}&quot;
+    gateway_user_pwd:   &#39;password&#39;
+    auth_token_domain:  &quot;%{hiera(&#39;pia_auth_token_domain&#39;)}&quot;
+    cookie_name:        &#39;HR-TST-PORTAL-JSESSIONID&#39;
+
+    webserver_settings:
+      webserver_type:           &quot;%{hiera(&#39;webserver_type&#39;)}&quot;
+      webserver_home:           &quot;%{hiera(&#39;weblogic_location&#39;)}&quot;
+      webserver_admin_user:     system
+      webserver_admin_user_pwd: &#39;password&#39;
+      webserver_admin_port:     10420
+      webserver_http_port:      10420
+      webserver_https_port:     10430
+
+    config_settings:
+      Servers/PIA:
+        ListenAddress:          0.0.0.0
+      Servers/PIA/WebServer/PIA/WebServerLog/PIA: 
+        LoggingEnabled:         true
+        LogFileFormat:          extended
+        BufferSizeKB:           0
+        ELFFields:              &#39;date time cs-method cs-uri sc-status cs-username cs(user-agent) s-ip c-ip cs(X-Forwarded-For) time-taken bytes x-OPRIDLogField&#39;
+
+    site_list:
+      &quot;%{hiera(&#39;TST_pia&#39;)}&quot;:
+        appserver_connections: &quot;%{hiera(&#39;TST_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;TST_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        PTWEBSERVER
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    COMET
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Test
+          8998:         danger
+          8999:         TEST
+          9000:         &#39;http://hr-app-d3.psadmin.io:10420/psp/hr92tst/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15420/psp/fs92tst/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10420/psc/hr92tst_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15420/psc/fs92tst_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+      
+      &quot;%{hiera(&#39;TST_pia&#39;)}_fp&quot;:
+        appserver_connections: &quot;%{hiera(&#39;TST_pia_psserver_list&#39;)}&quot;
+        domain_conn_pwd:       &quot;%{hiera(&#39;TST_domain_conn_pwd&#39;)}&quot;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        FORGOT
+          profile_user_pwd:   &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+          web_profile_name:    FORGOTPASSWORD
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;
+        text_properties:
+          138:          COMET Test
+          8998:         danger
+          8999:         TEST
+          9000:         &#39;http://hr-app-d3.psadmin.io:10420/psp/hr92tst/?&amp;cmd=login&#39;
+          9001:         &#39;http://fs-app-d3.psadmin.io:15420/psp/fs92tst/?&amp;cmd=login&#39;
+          9010:         &#39;http://hr-app-d3.psadmin.io:10420/psc/hr92tst_fp/EMPLOYEE/HRMS/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+          9011:         &#39;http://fs-app-d3.psadmin.io:15420/psc/fs92tst_fp/EMPLOYEE/ERP/c/MAINTAIN_SECURITY.EMAIL_PSWD.GBL&#39;
+
+emfhub-8.55.13:
+    os_user:            &quot;%{hiera(&#39;domain_user&#39;)}&quot;
+    ps_cfg_home_dir:    &quot;%{hiera(&#39;peoplesoft_base&#39;)}/emfhub-8.55.13&quot;
+    gateway_user:       &quot;%{hiera(&#39;pia_gateway_user&#39;)}&quot;
+    gateway_user_pwd:   &#39;password&#39;
+    auth_token_domain:  &quot;%{hiera(&#39;pia_auth_token_domain&#39;)}&quot;
+    cookie_name:        &#39;EMF-PORTAL-JSESSIONID&#39;
+
+    webserver_settings:
+      webserver_type:           &quot;%{hiera(&#39;webserver_type&#39;)}&quot;
+      webserver_home:           &quot;%{hiera(&#39;weblogic_location&#39;)}&quot;
+      webserver_admin_user:     system
+      webserver_admin_user_pwd: &#39;password&#39;
+      webserver_admin_port:     16513
+      webserver_http_port:      16513
+      webserver_https_port:     17512
+
+    site_list:
+      emfhub:
+        appserver_connections: &quot;%{::fqdn}:9000&quot;
+        domain_conn_pwd:       &#39;password&#39;
+
+        webprofile_settings:
+          profile_name:        &quot;%{hiera(&#39;pia_webprofile_name&#39;)}&quot;
+          profile_user:        PTWEBSERVER
+          profile_user_pwd:    &quot;%{hiera(&#39;appserv_user_pwd&#39;)}&quot;
+
+        report_repository_dir: &quot;%{hiera(&#39;report_repository_dir&#39;)}&quot;</pre></noscript>
+<script src="https://gist.github.com/iversond/0c096258ffe2d624d1c64b8aaffad846.js"> </script>
+
+
+        </main>
+      </div><!-- /#content -->
+
+    </div><!-- /.wrapper -->
+  </body>
+</html>

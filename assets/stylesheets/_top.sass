@@ -1,0 +1,48 @@
+
+.logo
+  position: relative
+  margin: 0 1.5rem 0 $column-gutter/2
+  float: left
+  a
+    display: block
+    width: 100px
+    height: $top-height
+    z-index: 999
+    outline: none
+    text-indent: -9999px
+    
+.top
+  background-color: #04a6ff
+
+.topbar
+  font-size: $font-size-m
+  background-color: #04a6ff
+  color: $white
+
+  .navigation
+    padding: 0
+    margin: 0
+    height: $top-height
+    list-style: none
+    li
+      display: inline-block
+      margin-right: 1rem
+
+    .toggle
+      float: right
+      margin-top: .6em
+      
+      @media #{$large-up}
+        display: none
+
+  a
+    display: block
+    color: $white
+    font-size: $font-size-sm
+    cursor: pointer
+    height: $top-height
+    line-height: $top-height + 2px
+    border: none
+    text-decoration: none
+    &:hover
+      text-decoration: underline
