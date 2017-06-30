@@ -4,16 +4,6 @@
 
 ## Markdown and structure
 
-We're planning to lint the Markdown with [Coala.io][coala] and the [MarkdownBear][bear].
-
-We'll be using a subset (TBD) of the full [list of checks][checks].
-
-[coala]: http://coala.io/ "Coala CI"
-
-[bear]: https://github.com/coala/bear-docs/blob/master/docs/MarkdownBear.rst "MarkdownBear"
-
-[checks]: https://github.com/coala/bear-docs/blob/master/docs/MarkdownBear.rst#settings "MarkdownBear checks"
-
 ### Headings
 
 For historical reasons, the top level heading in Jekyll markdown files is level 2 (##) not level 1 (#).
@@ -87,11 +77,11 @@ All function names, filenames, etc should be marked with `back-ticks`.
 
 If you're talking about applications or services, only the actual command should be marked as code, not the name of the service:
 
-- Start the PostgreSQL database by running `psql`.
+- Start SQL*Plus by running `sqlplus`.
 
 ### Blockquotes / Notes / Warnings
 
-As we have no use for blockquotes we use `>` to indicate notes and warnings:
+Use `>` to indicate notes and warnings:
 
 ```markdown
 > Note this important info!
@@ -116,9 +106,6 @@ This code is in .travis.yml
 {: data-file=".travis.yml"}
 
 
-
-### Common misspellings and words to avoid
-
-- Always refer to *Travis CI* and never to Travis.
-
 ## Images
+
+Always include text for configuration items. Screenshots and images should only be used to accompany the text description; never use only an image for documentation.
