@@ -1,0 +1,67 @@
+<div id="sidebar" class="sidebar">
+  <div>
+    <!-- <h2>Search</h2> 
+    <div class="searchbox">
+      <form>
+        <input type="text" id="st-search-input" class="searchbox-input" placeholder="Search the docs" />
+      </form>
+      <script type="text/javascript">
+      var Swiftype = window.Swiftype || {};
+        (function() {
+          Swiftype.key = 'tXvDDzd4fNTBnLvxfEyx';
+
+      Swiftype.searchSearchFields = {
+            "page": ["title, body, tags"]
+          };
+          Swiftype.autocompleteSearchFields = {
+            "page": ["title, body, tags"]
+          };
+          /** DO NOT EDIT BELOW THIS LINE **/
+          var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+          script.src = "//swiftype.com/embed.js";
+          var entry = document.getElementsByTagName('script')[0];
+          document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+        }());
+      </script>
+    </div> -->
+  </div>
+
+  <section class="sidebar-navigation">
+    <nav>
+      <h3>Getting Started</h3>
+      <ul>
+        <li><a href="/user/getting-started/">Getting started</a></li>
+      </ul>
+
+      <h3>PeopleTools</h3>
+      <ul>
+      </ul>
+      <h3>Database</h3>
+      <ul>
+      </ul>
+
+      <h3>Middleware</h3>
+      <ul>
+      </ul>
+
+      <h3>PeopleSoft Cloud Architecture</h3>
+      <ul>
+        <li class="is-overview"><a href="/user/pca/">Overview</a></li>
+        {% for title in site.data.pca %}
+        <li><a href="{{title[1]}}">{{title[0]}}</a></li>
+        {% endfor %}
+      </ul>
+
+      <h3>Server Administration</h3>
+      <ul>
+      </ul>
+
+    </nav>
+  </section>
+
+  <section class="sidebar-notice">
+    <p>This documentation site is open source.
+      The <a href="https://github.com/psadmin-io/wiki">README in our Git repository</a> explains how to contribute.</p>
+  </section>
+
+</div><!-- /#sidebar -->
