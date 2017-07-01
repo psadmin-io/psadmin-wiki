@@ -14,9 +14,12 @@ kramdown:
 gems:
   - jekyll-redirect-from
   - jekyll-gist
+  - jekyll-lunr-js-search
 whitelist:
   - jekyll-redirect-from
 sass:
   sass_dir: assets/stylesheets
 gist:
   noscript: false
+lunr_search:
+  excludes: [feed.build-env-updates.xml, Rakefile, Procfile, Gemfile, config.ru, _config.yml, .travis.yml]

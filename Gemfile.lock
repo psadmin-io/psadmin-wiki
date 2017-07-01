@@ -40,6 +40,10 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
+    jekyll-lunr-js-search (3.3.0)
+      json (~> 2.0)
+      nokogiri (~> 1.7)
+      therubyracer (~> 0.12)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.12.1)
       jekyll (~> 3.3)
@@ -47,7 +51,9 @@ GEM
       sass (~> 3.4)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    json (2.0.2)
     kramdown (1.13.2)
+    libv8 (3.16.14.19-x86_64-darwin-16)
     liquid (3.0.6)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -76,12 +82,16 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     rdiscount (2.2.0.1)
+    ref (2.0.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
+    therubyracer (0.12.3)
+      libv8 (~> 3.16.14.15)
+      ref
     thread_safe (0.3.6)
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
@@ -97,6 +107,7 @@ DEPENDENCIES
   html-proofer (~> 3.0)
   jekyll (>= 3.1.6)
   jekyll-gist
+  jekyll-lunr-js-search
   jekyll-paginate
   jekyll-redirect-from
   puma
