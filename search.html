@@ -16,8 +16,9 @@ layout: search
         "content": {{ page.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ page.url | xml_escape }}"
       }
-      {% endif %}
+      
       {% unless forloop.last %},{% endunless %}
+    {% endif %}
     {% endfor %}
   };
 </script>
