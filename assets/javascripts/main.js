@@ -1,12 +1,5 @@
 $(document).ready(function () {
 
-  $.get('https://pnpcptp8xh9k.statuspage.io/api/v2/status.json').then(function(response) {
-    if(response.status && response.status.indicator) {
-      $('.status-circle').addClass(response.status.indicator);
-    }
-  });
-
-
   $('#toggle-menu').on('click', function () {
     $('#sidebar').toggleClass('is-open');
     $('.wrapper').toggleClass('is-fixed')
@@ -18,14 +11,12 @@ $(document).ready(function () {
 
   });
 
-
-
   var sidebarToggle = function () {
     $('.sidebar-navigation').addClass('has-js');
 
-    var sectionStorageId = 'travis-docs-nav';
+    var sectionStorageId = 'wiki-docs-nav';
     var storageContent = window.localStorage.getItem(sectionStorageId);
-    var linkStorageId = 'travis-docs-current';
+    var linkStorageId = 'wiki-docs-current';
     var linkStorageContent = window.localStorage.getItem(linkStorageId);
     var anchorWithStoragePath = $('.sidebar-navigation a[href="'+ linkStorageContent +'"]');
     var currentPath = window.location.pathname;
