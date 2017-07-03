@@ -19,7 +19,7 @@ This will copy the repositiory to the folder `psadmin-wiki`.
 Next, open the repository and create a new branch:
 
     cd psadmin-wiki
-    git checkout -b [new-branch-name]
+    git checkout -b <your-branch-name>
 
 For your branch name, use something descriptive so people know what the branch contains. (E.g, `update-README`, `push-notification-install`, etc)
 
@@ -64,12 +64,37 @@ You can include Github gists if you want. Copy the code below and replace the `s
 
     <script src="https://gist.github.com/iversond/0c096258ffe2d624d1c64b8aaffad846.js"> </script>
 
+### Add your article to the sidebar
 
+Once your article is done, you need to add it to the sidebar. Under `_database\` are YAML files that drive the sidebar content. Open the YAML for the section you addded your article to and append an entry:
 
+    Sample psft_customizations.yaml: "/user/pca/sample_yaml/"
 
-## How to check your edit before sending PR
+### Create a git commit
 
-You can inspect how your edits will be reflected by the documentation site.
+Once your article is done and added to the sidebar, create a Git commit for your chagnes.
+
+    git add .
+    git status 
+
+Make sure everything you changed is added to the commit.
+
+    git commit -m "Added sample `psft_customizations.yaml` article"
+
+Then, push your changes up to GitHub so they can be reviewed before merging into the master wiki branch.
+
+    git push origin <your-branch-name>
+
+### Create a pull request
+
+GitHub has an excellent Pull Request feature where you can submit changes to the wiki. The Pull Request will be submited for review, and the wiki changes you submited will be tested to make sure nothing in the wiki broke.
+
+1. In GitHub, open the repository page for the wiki, click on the *Pull Requests* tab and select *Create Pull Request*.
+1. 
+
+## How to check your edits before sending PR
+
+You can inspect how your edits will be reflected on the published wiki.
 
 ### Install dependencies
 
