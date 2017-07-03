@@ -87,14 +87,19 @@ Then, push your changes up to GitHub so they can be reviewed before merging into
 
 ### Create a pull request
 
-GitHub has an excellent Pull Request feature where you can submit changes to the wiki. The Pull Request will be submited for review, and the wiki changes you submited will be tested to make sure nothing in the wiki broke.
+GitHub has an excellent Pull Request (PR) feature where you can submit changes to the wiki. The PR will be submited for review and the wiki changes will be tested to make sure nothing in the wiki broke.
 
 1. In GitHub, open the repository page for the wiki, click on the *Pull Requests* tab and select *Create Pull Request*.
-1. 
+1. Select `master` as the base, and `<your-branch-name>` as the compare.
+1. Click the *Create Pull Request* button submit it for review.
+1. Add a title and fill out a description of the changes you made.
+1. Click *Create Pull Request* to finish the PR.
+
+After submitting the PR, the wiki branch you submitted will be pulled into a Travis-CI test build. If there are errors with the build, the results are displayed on the PR page. If the test build succeeded, the PR page will show a successful test.
 
 ## How to check your edits before sending PR
 
-You can inspect how your edits will be reflected on the published wiki.
+You can inspect how your edits will be reflected on the published wiki if you want to view the changes before submitting a PR. 
 
 ### Install dependencies
 
@@ -112,16 +117,7 @@ You can inspect how your edits will be reflected on the published wiki.
     $ bundle install --binstubs
     ```
 
-### Generate documentation
-
-Run
-
-```sh-session
-$ ./bin/jekyll build
-```
-
-
-### Run application server
+### Run the Jekyll application server
 
 You are now ready to start your documentation site, using Jekyll or Puma.
 For documentation edits, Jekyll is sufficient.
@@ -132,6 +128,12 @@ For documentation edits, Jekyll is sufficient.
 
     ```sh-session
     $ ./bin/jekyll serve
+    ```
+
+    You can also use:
+
+    ```powershell
+    bundle exec jekyll serve
     ```
 
 1. Open [localhost:4000](http://localhost:4000/) in your browser.
