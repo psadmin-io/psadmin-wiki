@@ -1,0 +1,23 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bakery Store - Articles</title>
+    <description>Your latest baking news</description>
+    <link>{{ site.url }}</link>
+    {% for page in site.pages %}
+      {% unless page.draft %}
+        {% if page.category != 'build_env_updates' %}
+        <item>
+          <title>{{ page.title | xml_escape }}</title>
+          <description>{{ page.content | xml_escape }}</description>
+          <link>{{ page.url | prepend: site.url }}</link>
+          <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
+        </item>
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </channel>
+</rss>

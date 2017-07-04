@@ -15,7 +15,6 @@ gems:
   - jekyll-redirect-from
   - jekyll-gist
   - jekyll-lunr-js-search
-  - jekyll-feed
 whitelist:
   - jekyll-redirect-from
 sass:
@@ -25,4 +24,4 @@ gist:
 lunr_search:
   excludes: [feed.build-env-updates.xml, Rakefile, Procfile, Gemfile, config.ru, _config.yml, .travis.yml]
 feed:
-  path: feed.xml
+  path: atom.xml
