@@ -4,19 +4,17 @@ layout: null
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bakery Store - Articles</title>
-    <description>Your latest baking news</description>
+    <title>psadmin.io Community WIki</title>
+    <description>PeopleSoft Administration Knowledge</description>
     <link>{{ site.url }}</link>
-    {% for page in site.pages %}
-      {% unless page.draft %}
-        {% if page.category != 'build_env_updates' %}
+    {% for post in site.posts %}
+      {% unless post.draft %}
         <item>
-          <title>{{ page.title | xml_escape }}</title>
-          <description>{{ page.content | xml_escape }}</description>
-          <link>{{ page.url | prepend: site.url }}</link>
-          <guid isPermaLink="true">{{ page.url | prepend: site.url }}</guid>
+          <title>{{ post.title | xml_escape }}</title>
+          <description>{{ post.content | xml_escape }}</description>
+          <link>{{ post.url | prepend: site.url }}</link>
+          <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
         </item>
-        {% endif %}
       {% endunless %}
     {% endfor %}
   </channel>

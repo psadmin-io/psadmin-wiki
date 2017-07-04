@@ -1,7 +1,7 @@
 ---
 title: Sample psft_customizations.yaml
 layout: en
-permalink: /user/pca/sample_yaml/
+permalink: /posts/pca/sample_yaml/
 ---
 
 ## Sample psft_customizations.yaml File

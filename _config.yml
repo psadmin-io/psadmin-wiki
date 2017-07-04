@@ -22,6 +22,6 @@ sass:
 gist:
   noscript: false
 lunr_search:
-  excludes: [feed.build-env-updates.xml, Rakefile, Procfile, Gemfile, config.ru, _config.yml, .travis.yml]
+  excludes: [feed.build-env-updates.xml, Rakefile, Procfile, Gemfile, config.ru, _config.yml, .travis.yml, 404.html, feed.xml, search.html]
 feed:
   path: atom.xml

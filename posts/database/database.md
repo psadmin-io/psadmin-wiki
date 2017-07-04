@@ -1,7 +1,7 @@
 ---
 title: Database
 layout: en
-permalink: /user/database/
+permalink: /posts/database/
 ---
 
 This section is for articles on managing PeopleSoft databases. This includes Oracle, SQL Server and DB2 platforms.
