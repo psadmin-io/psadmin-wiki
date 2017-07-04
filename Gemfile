@@ -20,3 +20,5 @@ gem 'html-proofer', '~> 3.0'
 
 gem 'jekyll-gist'
 gem 'jekyll-lunr-js-search'
+
+gem 'jekyll-feed'
