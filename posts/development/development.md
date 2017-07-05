@@ -1,7 +1,7 @@
 ---
 title: PeopleSoft Development
 layout: en
-permalink: /user/development/
+permalink: /posts/development/
 ---
 
 This section is for articles on PeopleSoft development.

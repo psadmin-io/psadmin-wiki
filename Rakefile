@@ -49,7 +49,7 @@ task :run_html_proofer do
                               :only_4xx => true,
                               :typhoeus => { :ssl_verifypeer => false, :ssl_verifyhost => 0, :followlocation => true },
                               :url_ignore => ["https://www.appfog.com/", /itunes\.apple\.com/, /coverity.com/, /articles201769485/],
-                              :file_ignore => ["./_site/api/index.html", "./_site/user/languages/erlang/index.html"]
+                              :file_ignore => ["./_site/api/index.html", "./_site/posts/languages/erlang/index.html"]
                             })
   tester.run
 end

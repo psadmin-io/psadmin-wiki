@@ -1,7 +1,7 @@
 ---
 title: PeopleTools
 layout: en
-permalink: /user/peopletools/
+permalink: /posts/peopletools/
 ---
 
 This section is for articles on PeopleTools features. This includes features on the *PeopleTools* menu like:

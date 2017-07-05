@@ -1,7 +1,7 @@
 ---
 title: PeopleSoft Cloud Architecture
 layout: en
-permalink: /user/pca/
+permalink: /posts/pca/
 ---
 
 The PeopleSoft Cloud Architecture section includes the following technologies:

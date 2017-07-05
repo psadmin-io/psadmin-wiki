@@ -25,7 +25,7 @@ For your branch name, use something descriptive so people know what the branch c
 
 ### Add your article
 
-All the wiki articles live under the `user` folder, and are organized into a few sections. Put your file under the section that most applies to the topic you are contributing. Under each section is an OVERVIEW articles with guidelines on what the topics are included.
+All the wiki articles live under the `posts` folder, and are organized into a few sections. Put your file under the section that most applies to the topic you are contributing. Under each section is an OVERVIEW articles with guidelines on what the topics are included.
 
 * PeopleTools
 * Database
@@ -36,7 +36,7 @@ All the wiki articles live under the `user` folder, and are organized into a few
 
 Now you can use your text editor to add a new article. For example, we'll add a new article that shows a sample `psft_customizations.yaml` file under the *PeopleSoft Cloud Architecure" section. I'll create a new file with VS Code:
 
-     code user/pca/sample_yaml.md
+     code posts/pca/sample_yaml.md
 
 #### Front-data
 
@@ -45,10 +45,10 @@ At the top of every wiki article is some YAML data that tells the wiki how to re
     ---
     title: Sample psft_customizations.yaml
     layout: en
-    permalink: /user/pca/sample_yaml/
+    permalink: /posts/pca/sample_yaml/
     ---
 
-Update the title and permalink values. For the `permalink`value, use the convention `/user/<section>/<filename>/` The permalink will be the URL to the wiki page.
+Update the title and permalink values. For the `permalink`value, use the convention `/posts/<section>/<filename>/` The permalink will be the URL to the wiki page.
 
 #### Wiki article
 
@@ -68,7 +68,7 @@ You can include Github gists if you want. Copy the code below and replace the `s
 
 Once your article is done, you need to add it to the sidebar. Under `_database\` are YAML files that drive the sidebar content. Open the YAML for the section you addded your article to and append an entry:
 
-    Sample psft_customizations.yaml: "/user/pca/sample_yaml/"
+    Sample psft_customizations.yaml: "/posts/pca/sample_yaml/"
 
 ### Create a git commit
 

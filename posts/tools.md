@@ -1,7 +1,7 @@
 ---
 title: Software and Tools
 layout: en
-permalink: /user/tools/
+permalink: /posts/tools/
 ---
 
 
