@@ -38,8 +38,6 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
-    jekyll-feed (0.9.2)
-      jekyll (~> 3.3)
     jekyll-gist (1.4.0)
       octokit (~> 4.2)
     jekyll-lunr-js-search (3.3.0)
@@ -108,7 +106,6 @@ DEPENDENCIES
   faraday
   html-proofer (~> 3.0)
   jekyll (>= 3.1.6)
-  jekyll-feed
   jekyll-gist
   jekyll-lunr-js-search
   jekyll-paginate
