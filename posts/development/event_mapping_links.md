@@ -4,7 +4,7 @@ layout: en
 permalink: /posts/development/event_mapping_links/
 ---
 
-## A collection of links about Even Mapping
+## A collection of links about Event Mapping
 
 *Chris Malek on Event Mapping*
 
