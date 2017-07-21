@@ -4,7 +4,7 @@ This is the GitHub repo for the psadmin.io Community Wiki (<http://wiki.psadmin.
 
 ## How to contribute
 
-Any one can contribute to the Communtiy Wiki. To make a contribution or edit, you'll need Git installed. It's also recommended you use a good text editor (like SublimeText, VS Code, Notepad++, vi) and are familiar with [Markdown formatting](https://guides.github.com/features/mastering-markdown/). 
+Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you'll need Git installed. It's also recommended you use a good text editor (like SublimeText, VS Code, Notepad++, vi) and are familiar with [Markdown formatting](https://guides.github.com/features/mastering-markdown/). 
 
 ### Clone the wiki git repository
 
