@@ -34,7 +34,7 @@ All the wiki articles live under the `posts` folder, and are organized into a fe
 * Server Administration
 * Development
 
-Now you can use your text editor to add a new article. For example, we'll add a new article that shows a sample `psft_customizations.yaml` file under the *PeopleSoft Cloud Architecure" section. I'll create a new file with VS Code:
+Now you can use your text editor to add a new article. For example, we'll add a new article that shows a sample `psft_customizations.yaml` file under the *PeopleSoft Cloud Architecure* section. I'll create a new file with VS Code:
 
      code posts/pca/sample_yaml.md
 
@@ -60,7 +60,7 @@ Start the wiki article with a heading (two `##`) and the title. Everything after
 
 #### Gists
 
-You can include Github gists if you want. Copy the code below and replace the `src=` with the link to your Gist.
+You can include GitHub gists if you want. Copy the code below and replace the `src=` with the link to your Gist.
 
     <script src="https://gist.github.com/iversond/0c096258ffe2d624d1c64b8aaffad846.js"> </script>
 
@@ -96,6 +96,8 @@ GitHub has an excellent Pull Request (PR) feature where you can submit changes t
 1. Click *Create Pull Request* to finish the PR.
 
 After submitting the PR, the wiki branch you submitted will be pulled into a Travis-CI test build. If there are errors with the build, the results are displayed on the PR page. If the test build succeeded, the PR page will show a successful test.
+
+A wiki administration will review the PR and merge the branch into `master` if there are no issues.
 
 ## How to check your edits before sending PR
 
