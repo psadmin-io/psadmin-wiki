@@ -15,9 +15,19 @@ The DPK uses a process called "cleanup" to remove installed software and domains
 
 The bootstrap scripts (`psft-dpk-setup`) has a parameter you can pass to remove installed software: 
 
+*8.55 DPK on Windows*
+```powershell
+.\psft-dpk-setup.ps1 --cleanup
+```
+*8.56 DPK on Windows*
+```bat
+.\psft-dpk-setup.bat --cleanup
+```
+*Linux*
 ```powershell
 .\psft-dpk-setup.sh --cleanup
 ```
+
 
 ### Using puppet apply
 
