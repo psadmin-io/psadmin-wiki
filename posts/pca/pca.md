@@ -1,5 +1,5 @@
 ---
-title: PeopleSoft Cloud Architecture
+title: Cloud Architecture
 layout: en
 permalink: /posts/pca/
 ---
