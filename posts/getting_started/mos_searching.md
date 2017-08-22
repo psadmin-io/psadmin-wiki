@@ -13,7 +13,7 @@ Use the platform codes to narrow down your search. For example, `E-RD` will sear
 Here is a list some common codes to use when searching
 
 * `E-PIA`: PIA related issue
-* `E-ES`: Elasticsearch 
+* `E-ES`: Elasticsearch
 * `E-PTSF`: PeopleSoft Search Framework (ES, SES and the PeopleSoft side)
 * `E-SSL`: SSL and PeopleSoft
 
