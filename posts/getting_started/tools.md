@@ -1,7 +1,7 @@
 ---
 title: Software and Tools
 layout: en
-permalink: /posts/tools/
+permalink: /posts/getting_started/tools/
 ---
 
 
