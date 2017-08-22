@@ -66,7 +66,7 @@ You can include GitHub gists if you want. Copy the code below and replace the `s
 
 ### Add your article to the sidebar
 
-Once your article is done, you need to add it to the sidebar. Under `_database\` are YAML files that drive the sidebar content. Open the YAML for the section you addded your article to and append an entry:
+Once your article is done, you need to add it to the sidebar. Under `posts\` are YAML files that drive the sidebar content. Open the YAML for the section you addded your article to and append an entry:
 
     Sample psft_customizations.yaml: "/posts/pca/sample_yaml/"
 
