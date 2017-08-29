@@ -31,4 +31,5 @@ ElasticHQ is meant to give you a read-only view of the system. If you want to ma
 
 To view a node, enter the URL into the box at the top and click 'Connect'. If your node is part of a cluster, ElasticHQ will show the cluster's nodes. You can view the size of indexes, the stats of each node, and the cluster stats as well.
 
-![ElasticHQ Screenshot]({{ site.url }}/assets/images/elasticHQOverview.png)
+![ElasticHQ Screenshot]({{ site.url }}/posts/images/ElasticHQOverview.png)
+
