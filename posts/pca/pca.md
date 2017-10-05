@@ -10,3 +10,4 @@ The PeopleSoft Cloud Architecture section includes the following technologies:
 * Automated Configuration Management
 * Puppet/Facter/Hiera
 * Anything related deploying software and managing server configuration
+* something to test
