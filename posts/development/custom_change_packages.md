@@ -4,6 +4,8 @@ layout: en
 permalink: /posts/development/custom_change_package/
 ---
 
+Author: Andy Dorfman
+
 ## Prepare External Objects
 
 ### Create DMS file
