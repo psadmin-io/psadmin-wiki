@@ -1,4 +1,4 @@
 for file in ../posts/*/*.md
 do
-   head -n5 $file
+   awk -F'[:\n]' 'BEGIN { RS = "---"}  ; /title: /{ printf "%s: \"%s\"\n", $3, $7 }' $file 
 done
