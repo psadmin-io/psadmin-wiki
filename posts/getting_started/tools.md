@@ -40,6 +40,10 @@ This page is a collection of different tools that I use to make a PS Admin's job
 
 *   [Instiki][15] - Free I have found that wiki is the best way to keep documentation as a PS Admin. Instiki is a very simple wiki that makes it easy to create pages, link topics, and reduces the amount of work to keep documentation up-to-date. It is a light-weight wiki based on Ruby on Rails which makes it easy to run on any server.
 
+*   [Confluence](https://www.atlassian.com/software/confluence) - A cheap and powerful tool for team documentation.
+
+*   [Trello](https://trello.com/) - Trello is a Kanban board that is great for managing lists.
+
 *   [Slack][16] - Free for small teams
     
     Slack is essentially IRC, but web-based and app-based with better features. I love using it with remote teams because it replaces the hallway discussions and creates better communication within teams.
