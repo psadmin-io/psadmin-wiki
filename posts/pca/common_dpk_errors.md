@@ -28,3 +28,13 @@ To resolve the error, move the `setup` folder (and other files in the directory)
     ├── PTC-DPK-WIN8.56.02-1of1.zip
     ├── readme.txt
     └── setup
+
+
+## `found character that cannot start any token while scanning for the next token`
+
+This error will display during the Puppet catalog build. The catalog build is when Puppet is performing Hiera lookups. The error can result from two common causes:
+
+1. The YAML file has a Tab character in it
+1. A string with special characters is not quoted
+
+To resolve the first issue, use your text editor to convert any Tab characters into spaces. For the second issue, make sure you use single quotes around passwords or any value that has special characters in it.
