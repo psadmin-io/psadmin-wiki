@@ -104,7 +104,7 @@ PLATFORMS
 
 DEPENDENCIES
   faraday
-  html-proofer (~> 3.0)
+  html-proofer
   jekyll (>= 3.1.6)
   jekyll-gist
   jekyll-lunr-js-search

@@ -5,7 +5,7 @@ branches:
   only:
     - master
 script:
-  - "bundle exec jekyll build"
+  - "bundle exec rake build"
 deploy:
   provider: pages
   skip_cleanup: true

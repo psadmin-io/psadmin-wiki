@@ -8,7 +8,7 @@ permalink: /posts/development/event_mapping_links/
 
 *Chris Malek on Event Mapping*
 
-* [Discovering Event Mapping](http://www.cedarhillsgroup.com/knowledge-base/kbarticles/PT855-assigning-application-class-peoplecode-to-component-events)
+* [Discovering Event Mapping](https://www.cedarhillsgroup.com/knowledge-base/kbarticles/pt855-assigning-application-class-peoplecode-to-component-events/)
 
 *Colton Fischer on Event Mapping*
 

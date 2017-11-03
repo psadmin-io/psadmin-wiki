@@ -12,6 +12,7 @@ end
 desc 'Builds the site'
 task :build => [:remove_output_dir] do
   FileUtils.rm '.jekyll-metadata' if File.exist?('.jekyll-metadata')
+  `./build/sidebar.sh`
   sh 'bundle exec jekyll build --config=_config.yml'
 end
 
