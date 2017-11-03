@@ -2,7 +2,7 @@ WIKI_BUILD=$(pwd)
 
 echo "### Building the Wiki Sidebar ###"
 echo $WIKI_BUILD
-rm -r $WIKI_BUILD/_data/*
+rm -rf $WIKI_BUILD/_data/*
 for file in $(find $WIKI_BUILD/posts -type f -name '*.md') 
 # $WIKI_BUILD/posts/
 # do
