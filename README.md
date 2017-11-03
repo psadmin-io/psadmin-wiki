@@ -64,12 +64,6 @@ You can include GitHub gists if you want. Copy the code below and replace the `s
 
     <script src="https://gist.github.com/iversond/0c096258ffe2d624d1c64b8aaffad846.js"> </script>
 
-### Add your article to the sidebar
-
-Once your article is done, you need to add it to the sidebar. Under `_data\` are YAML files that drive the sidebar content. Open the YAML for the section you addded your article to and append an entry:
-
-    Sample psft_customizations.yaml: "/posts/pca/sample_yaml/"
-
 ### Create a git commit
 
 Once your article is done and added to the sidebar, create a Git commit for your chagnes.
@@ -129,13 +123,8 @@ For documentation edits, Jekyll is sufficient.
 1. Run Jekyll server:
 
     ```sh-session
-    $ ./bin/jekyll serve
-    ```
-
-    You can also use:
-
-    ```powershell
-    bundle exec jekyll serve
+    $ rake
+    $ bundle exec jekyll serve
     ```
 
 1. Open [localhost:4000](http://localhost:4000/) in your browser.
