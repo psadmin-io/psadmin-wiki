@@ -52,7 +52,7 @@ This page is a collection of different tools that I use to make a PS Admin's job
  [6]: http://www.sublimetext.com
  [7]: https://packagecontrol.io/installation#st3
  [8]: http://www.lancaster.ac.uk/~steveb/cpaap/pfe/pfefiles.htm
- [9]: http://sqrexpress.com
+ [9]: http://www.bcstools.com
  [10]: http://support.oracle.com
  [11]: http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html
  [12]: https://chrome.google.com/webstore/detail/pschrome/cpgoncheakfjhldfbebekijoeaabnfeb?hl=en
