@@ -84,7 +84,7 @@ GEM
     rack-jekyll (0.5.0)
       jekyll (>= 1.3)
       listen (>= 1.3)
-      rack (~> 1.5.4)
+      rack (~> 1.5)
     rack-ssl-enforcer (0.2.9)
     rake (12.3.0)
     rb-fsevent (0.10.2)
@@ -119,7 +119,7 @@ PLATFORMS
 DEPENDENCIES
   faraday
   html-proofer
-  jekyll (>= 3.1.6)
+  jekyll (>= 3.7.3)
   jekyll-gist
   jekyll-lunr-js-search
   jekyll-paginate
