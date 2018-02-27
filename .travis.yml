@@ -1,14 +1,15 @@
 sudo: false
 language: ruby
-rvm: 2.2.2
+rvm: 2.2.5
 branches:
   only:
     - master
 script:
+  - "bundle install --full-index"
   - "bundle exec rake build"
 deploy:
   provider: pages
-  skip_cleanup: true
+  skip_cleanup: false
   github_token: $GITHUB_API_KEY # Set in travis-ci.org dashboard
   local_dir: _site
   repo: psadmin-io/psadmin-io.github.io
