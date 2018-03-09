@@ -1,15 +1,22 @@
+sudo: false
+language: ruby
+rvm: 2.2.5
+branches:
+  only:
+    - master
 script:
-- |-
-  git config user.name "Dan Iverson"
-  git config user.email "dan@psadmin.io"
-  git remote remove origin
-  git remote add origin https://$GITHUB_API_KEY@github.com/psadmin-io/psadmin-wiki.git > /dev/null 2>&1
-  git remote add upstream https://$GITHUB_API_KEY@github.com/psadmin-io/psadmin-wiki.wiki.git > /dev/null 2>&1
-  git fetch origin
-  git fetch upstream
-  git merge upstream/master --no-edit
-  git push origin HEAD:master > /dev/null 2>&1
-  git push upstream HEAD:master > /dev/null 2>&1
+  - "bundle install --full-index"
+  - "bundle exec rake build"
+deploy:
+  provider: pages
+  skip_cleanup: false
+  github_token: $GITHUB_API_KEY # Set in travis-ci.org dashboard
+  local_dir: _site
+  repo: psadmin-io/psadmin-io.github.io
+  fqdn: wiki.psadmin.io
+  target_branch: master
+  on:
+    branch: master
 env:
   matrix:
   - secure: A5NnQo7ykdKysHgEmoTfz9vJ685RT20TbTZ32Oe8lYQCESnYIOBBiKD9QPSlRKEuYY6U/XC6E9j7dxiDU1xCdcPjnpIxn3saP/+njx3qDAC2Zd1dhOmVyfvu9E8FtAsaRDVwmttFhdMvGmgzcAHwPGySij/QwcJEcM0pzL3KFhM/E262cAMXyXnfGFmecb69xLTE60SP8jC8WPYfA1f/xR2PJ1Kb1MrP2eaBaAf9qHIJPHRqVKIIrM+b3V3uO7K5io0jG3vWszP0VEU33i4QbvmSQszeid6XePD3ihinXnYJyypMkcFAhE2gurTH9nrUcscFkRoqpH+ybZrWtq8L9tr1ZfRD0IcwOjDDps9U0CmuMTuG3Uj0gDFhM8c4daw+rmgZDbJQP5O6dAA5xNYR/fl01Jv/GhPhUtFG6U/bjfE2u6be03mQGM0HeziEvbktmQZi95GAJ0dH97b5BaIe0rR/E3WRAAjRDYeVqeKB9Hn1nyaW/eQf0FN62eFKXxJ3S3nPzGtlobx7FTyljC14GSRzcfplEXnpBgXngfc8dpWoFWI8+jvPI/3Jp37RuSmDB61YLeJVlodgmvWzvxY/NR0E64Cz4ACPmHmZ0H45kvlLJV1pwzujHRYSN9LK5D36tyWJu20GdLlqW0z8ZxnVrsHFjHO9KQLYPBaP/8xa2vU=

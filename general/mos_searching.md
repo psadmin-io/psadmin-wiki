@@ -1,3 +1,9 @@
+---
+title: Searching in My Oracle Support
+layout: en
+permalink: /posts/getting_started/mos_searching/
+---
+
 Some tips when searching in My Oracle Support to help you find relevant documents.
 
 ### Platform Codes
