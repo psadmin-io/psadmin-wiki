@@ -1,5 +1,7 @@
 ## Categories
 
-### [_posts/admin/admin.md](Server Administration)
+### Server Administration
+
+[_posts/admin/admin.md](Server Administration Overview)
 
 ### PeopleTools
