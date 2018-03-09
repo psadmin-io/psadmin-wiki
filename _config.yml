@@ -1,1 +1,26 @@
-theme: jekyll-theme-slate
+title: "psadmin.io Wiki"
+email: "podcast@psadmin.io"
+url: "https://wiki.psadmin.io"
+docs_github: "https://github.com/psadmin-io/psadmin-wiki"
+exclude: [bin, CNAME, Gemfile, Gemfile.lock, README.md, slate, vendor, '*.erb']
+markdown: kramdown
+permalink: :title
+syntax-highlighting:
+  enabled: true
+kramdown:
+  hard_wrap: false
+  input: GFM
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+plugins:
+  - jekyll-redirect-from
+  - jekyll-gist
+  - jekyll-lunr-js-search
+whitelist:
+  - jekyll-redirect-from
+sass:
+  sass_dir: assets/stylesheets
+gist:
+  noscript: false
+lunr_search:
+  excludes: [feed.build-env-updates.xml, Rakefile, Procfile, Gemfile, config.ru, _config.yml, .travis.yml, 404.html, feed.xml, search.html]
+theme: jekyll-theme-minimal
