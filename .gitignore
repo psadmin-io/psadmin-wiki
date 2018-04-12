@@ -9,3 +9,4 @@ tmp/
 .jekyll-metadata
 node_modules
 generated-language-mapping.json
+token.md
