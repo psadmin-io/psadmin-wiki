@@ -11,8 +11,8 @@ script:
   - "bundle exec rake build"
 deploy:
   provider: pages
-  skip_cleanup: false
-  github_token: $GITHUB_API_KEY # Set in travis-ci.org dashboard
+  skip_cleanup: true
+  github_token: $GH_TOKEN # Set in travis-ci.org dashboard
   local_dir: _site
   repo: psadmin-io/psadmin-io.github.io
   fqdn: wiki.psadmin.io
