@@ -25,7 +25,7 @@ get-service -name psft* -computername <server or server,list> | stop-service
 Since there is no `delete-service` cmdlet, use this command to delete services by name. For each service that contains "psft", loop through the services and delete them.
 
 ```powershell
-Get-WmiObject -Class Win32_Service -Filter "name like 'Psft%'" | % { $_.delete() }
+ Get-WmiObject -Class Win32_Service | Where-Object { $_.name -like 'Psft*' } | % { $_.delete() }
 ```
 
 You can also drop into a Command Prompt and use `sc` to delete a service.
