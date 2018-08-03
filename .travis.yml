@@ -7,7 +7,9 @@ branches:
   only:
     - master
 script:
-  - "git clone  psadmin-io/psadmin-wiki"
+  - "git clone https://github.com/psadmin-io/psadmin-wiki-builder builder"
+  - "cd builder"
+  - "git clone https://github.com/psadmin-io/psadmin-wiki-builder posts"
   - "bundle install --full-index"
   - "bundle exec rake build"
 deploy:
