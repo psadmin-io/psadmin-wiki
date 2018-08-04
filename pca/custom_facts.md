@@ -27,3 +27,7 @@ In your `psft_customizations.yaml` file, you can reference these facts. For exam
 pia_domain_list:
   "peoplesoft-%{::region}":
 ```
+
+## Fact Override
+
+You can also override some facts using environment variables. To override a fact, set an environment variable like `$env:FACTER_factname="newvalue"`. The environment variable must start with `FACTER_`.
