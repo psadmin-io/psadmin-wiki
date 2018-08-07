@@ -11,3 +11,4 @@ Elasticsearch is an API-based tool so there are no delivered GUI tools to monito
 * [ElasticHQ](https://wiki.psadmin.io/posts/middleware/elastichq/)
 * [Elasticsearch Head](https://mobz.github.io/elasticsearch-head/)
 * [Cerebro](https://github.com/lmenezes/cerebro)
+* [Monitoring (from Elasticsearch)](https://www.elastic.co/products/stack/monitoring)
