@@ -1,6 +1,17 @@
 # About this repository [![Build Status](https://travis-ci.org/psadmin-io/psadmin-wiki.svg?branch=master)](https://travis-ci.org/psadmin-io/psadmin-wiki)
 
-This is the GitHub repo for the psadmin.io Community Wiki (<http://wiki.psadmin.io>). The Community Wiki is a place for PeopleSoft Administrators to share documentation on setting up new features, how they resolved issues, and anything else they would like to share.
+The Community Wiki is a place for PeopleSoft Administrators to share documentation on setting up new features, how they resolved issues, and anything else they would like to share.
+
+## How to use the wiki
+
+On the left are folder to group the various topics related to PeopleSoft Adminstration:
+
+* **[PeopleTools](peopletools/peopletools.md)**: Looking to configure a feature that is available under `Main Menu > PeopleTools`? Look under here.
+* **[Database](database/database.md)**: Articles about managing or working the the database.
+* **[Middleware](middleware/middleware.md)**: Want to read about Tuxedo, Java, WebLogic, COBOL. The middleware folder is for all supporting software that runs PeopleSoft
+* **[PeopleSoft Cloud Architecture](pca/pca.md)**: This area include Deployment Packages, Puppet, or anything about automation.
+* **[Server Administration](admin/admin.md)**: Articles about working with Windows, Linux, AIX or other server management topics.
+* **[Development](development/development.md)**: Posts about PeopleSoft development.
 
 ## How to contribute
 
