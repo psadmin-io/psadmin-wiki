@@ -13,9 +13,43 @@ On the left are folder to group the various topics related to PeopleSoft Adminst
 * **[Server Administration](admin/admin.md)**: Articles about working with Windows, Linux, AIX or other server management topics.
 * **[Development](development/development.md)**: Posts about PeopleSoft development.
 
-## How to contribute
+## How to contribute with GitHub
 
-Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you'll need Git installed. It's also recommended you use a good text editor (like SublimeText, VS Code, Notepad++, vi) and are familiar with [Markdown formatting](https://guides.github.com/features/mastering-markdown/). 
+Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you can use the GitHub online editing tools to modify existing posts or create new posts.
+
+**To edit an existing document:**
+
+1. Open the page in the repository and click the pencil icon. 
+1. When you are done editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
+1. Click the "Propose file change" button.
+1. On the Pull Request page, click the "Create pull request" button to submit your change for inclusion.
+
+**To add a new document:**
+
+1. Open the folder where you want to create the file and click the "Create new file" button.
+1. Add file name (use underscores for spaces) with the `.md` extension.
+1. At the top of the new document, add the front-matter:
+
+        ```
+        ---
+        title: Sample Title
+        layout: en
+        permalink: /posts/folder/sample_title/
+        ---
+        ```
+1. Add your title to the front-matter section.
+1. Modify the `folder` and `sample_title` in the permalink section to match the folder and your filename.
+1. When you are done creating and editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
+1. Click the "Propose file change" button.
+1. On the Pull Request page, click the "Create pull request" button to submit your change for inclusion.
+
+**Publishing your changes**
+
+GitHub will test your changes with the wiki to ensure the wiki builds successfully. When the test has completed, a wiki administrator will approve your changes into the `master` branch. Commits to the `master` branch will trigger a new wiki build and update the site `wiki.psadmin.io` in a few minutes.
+
+## How to contribute from a local Git repo
+
+Anyone can contribute to the Communtiy Wiki. To make a contribution or edit from a local copy of the repository, you'll need Git installed. It's also recommended you use a good text editor (like SublimeText, VS Code, Notepad++, vi) and are familiar with [Markdown formatting](https://guides.github.com/features/mastering-markdown/). 
 
 ### Clone the wiki git repository
 
