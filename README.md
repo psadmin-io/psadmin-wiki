@@ -2,9 +2,22 @@
 
 This is the GitHub repo for the psadmin.io Community Wiki (<http://wiki.psadmin.io>). The Community Wiki is a place for PeopleSoft Administrators to share documentation on setting up new features, how they resolved issues, and anything else they would like to share.
 
-## How to contribute
+## How to contribute with GitHub
 
-Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you'll need Git installed. It's also recommended you use a good text editor (like SublimeText, VS Code, Notepad++, vi) and are familiar with [Markdown formatting](https://guides.github.com/features/mastering-markdown/). 
+Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you can use the GitHub online editing tools to modify existing posts or create new posts.
+
+To edit an existing document, 
+
+1. Open the page in the repository and click the pencil icon. 
+1. When you are done editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
+1. Click the "Propose file change" button.
+1. On the Pull Request page, click the "Create pull request" button to submit your change for inclusion.
+
+GitHub will test your changes with the wiki to ensure the wiki builds successfully. When the test has completed, a wiki administrator will approve your changes into the `master` branch. Commits to the `master` branch will trigger a new wiki build and update the site `wiki.psadmin.io` in a few minutes.
+
+## How to contribute from a local Git repo
+
+Anyone can contribute to the Communtiy Wiki. To make a contribution or edit from a local copy of the repository, you'll need Git installed. It's also recommended you use a good text editor (like SublimeText, VS Code, Notepad++, vi) and are familiar with [Markdown formatting](https://guides.github.com/features/mastering-markdown/). 
 
 ### Clone the wiki git repository
 
