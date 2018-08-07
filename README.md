@@ -6,12 +6,33 @@ This is the GitHub repo for the psadmin.io Community Wiki (<http://wiki.psadmin.
 
 Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you can use the GitHub online editing tools to modify existing posts or create new posts.
 
-To edit an existing document, 
+**To edit an existing document:**
 
 1. Open the page in the repository and click the pencil icon. 
 1. When you are done editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
 1. Click the "Propose file change" button.
 1. On the Pull Request page, click the "Create pull request" button to submit your change for inclusion.
+
+**To add a new document:**
+
+1. Open the folder where you want to create the file and click the "Create new file" button.
+1. Add file name (use underscores for spaces) with the `.md` extension.
+1. At the top of the new document, add the front-matter:
+
+        ```
+        ---
+        title: Sample Title
+        layout: en
+        permalink: /posts/folder/sample_title/
+        ---
+        ```
+1. Add your title to the front-matter section.
+1. Modify the `folder` and `sample_title` in the permalink section to match the folder and your filename.
+1. When you are done creating and editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
+1. Click the "Propose file change" button.
+1. On the Pull Request page, click the "Create pull request" button to submit your change for inclusion.
+
+**Publishing your changes**
 
 GitHub will test your changes with the wiki to ensure the wiki builds successfully. When the test has completed, a wiki administrator will approve your changes into the `master` branch. Commits to the `master` branch will trigger a new wiki build and update the site `wiki.psadmin.io` in a few minutes.
 
