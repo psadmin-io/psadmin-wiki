@@ -64,13 +64,13 @@ All the wiki articles live under the `posts` folder, and are organized into a fe
 * PeopleTools
 * Database
 * Middleware
-* PeopleSoft Cloud Architecture
+* Deployment Packages
 * Server Administration
 * Development
 
-Now you can use your text editor to add a new article. For example, we'll add a new article that shows a sample `psft_customizations.yaml` file under the *PeopleSoft Cloud Architecure* section. I'll create a new file with VS Code:
+Now you can use your text editor to add a new article. For example, we'll add a new article that shows a sample `psft_customizations.yaml` file under the *Deployment Packages* section. I'll create a new file with VS Code:
 
-     code posts/pca/sample_yaml.md
+     code posts/dpk/sample_yaml.md
 
 #### Front-data
 
@@ -79,7 +79,7 @@ At the top of every wiki article is some YAML data that tells the wiki how to re
     ---
     title: Sample psft_customizations.yaml
     layout: en
-    permalink: /posts/pca/sample_yaml/
+    permalink: /posts/dpk/sample_yaml/
     ---
 
 Update the title and permalink values. For the `permalink`value, use the convention `/posts/<section>/<filename>/` The permalink will be the URL to the wiki page.
@@ -125,11 +125,11 @@ GitHub has an excellent Pull Request (PR) feature where you can submit changes t
 
 After submitting the PR, the wiki branch you submitted will be pulled into a Travis-CI test build. If there are errors with the build, the results are displayed on the PR page. If the test build succeeded, the PR page will show a successful test.
 
-A wiki administration will review the PR and merge the branch into `master` if there are no issues.
+A wiki administrator will review the PR and merge the branch into `master` if there are no issues.
 
-## How to check your edits before sending PR
+## How to run the wiki locally
 
-You can inspect how your edits will be reflected on the published wiki if you want to view the changes before submitting a PR. 
+You can run the wiki locally and inspect how your edits will be reflected on the published wiki if you want to view the changes before submitting a PR. 
 
 ### Install dependencies
 

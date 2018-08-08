@@ -1,7 +1,7 @@
 ---
 title: Custom Facts
 layout: en
-permalink: /posts/pca/custom_facts/
+permalink: /posts/dpk/custom_facts/
 ---
 
 You can easily deploy custom facts to your server for use with the DPK and Puppet. Facter has a number of built-in facts, like `::hostname`, but we can use our own.
