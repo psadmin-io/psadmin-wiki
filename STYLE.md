@@ -126,3 +126,8 @@ When possible, try to keep articles OS agnostic. PeopleSoft runs on multiple OS'
 ```
 
 For articles that apply only to a specific OS, there is no need to make the article OS agnostic.
+
+## Authorship
+
+The wiki is a community collaboration and will have multiple people writing and editing documents. We will use the Git commit logs to track authorship instead logging it in the article.
+
