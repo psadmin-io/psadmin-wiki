@@ -1,7 +1,7 @@
 ---
 title: Common DPK Errors
 layout: en
-permalink: /posts/pca/common_dpk_errors/
+permalink: /posts/dpk/common_dpk_errors/
 ---
 
 Here are some common DPK errors and how to resolve them.

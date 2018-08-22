@@ -115,3 +115,14 @@ This code is in .travis.yml
 ## Images
 
 Always include text for configuration items. Screenshots and images should only be used to accompany the text description; never use only an image for documentation.
+
+## Handling OS Differences
+
+When possible, try to keep articles OS agnostic. PeopleSoft runs on multiple OS's so many of the topics will apply to all OS's. In the article you can add a section that contains OS specific documentation. This will let other add different OS specific documentation later on. If you want to include code samples, command line examples, set the code block syntax for the OS you are documenting.
+
+```markdown
+  ```bash        <- use this for Linux/Unix
+  ```powershell  <- use this for Windows
+```
+
+For articles that apply only to a specific OS, there is no need to make the article OS agnostic.

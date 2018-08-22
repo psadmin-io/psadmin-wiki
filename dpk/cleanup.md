@@ -1,7 +1,7 @@
 ---
 title: DPK Cleanup Process
 layout: en
-permalink: /posts/pca/cleanup/
+permalink: /posts/dpk/cleanup/
 ---
 
 ## DPK Cleanup Process

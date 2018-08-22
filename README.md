@@ -8,8 +8,8 @@ On the left are folder to group the various topics related to PeopleSoft Adminst
 
 * **[PeopleTools](peopletools/peopletools.md)**: Looking to configure a feature that is available under `Main Menu > PeopleTools`? Look under here.
 * **[Database](database/database.md)**: Articles about managing or working the the database.
-* **[Middleware](middleware/middleware.md)**: Want to read about Tuxedo, Java, WebLogic, COBOL. The middleware folder is for all supporting software that runs PeopleSoft
-* **[PeopleSoft Cloud Architecture](pca/pca.md)**: This area include Deployment Packages, Puppet, or anything about automation.
+* **[Middleware](middleware/middleware.md)**: Want to read about Elasticsearch, Tuxedo, Java, WebLogic, COBOL. The middleware folder is for all supporting software that runs PeopleSoft
+* **[Deployment Packages](dpk/dpk.md)**: This area include Deployment Packages, Puppet, or anything about automation.
 * **[Server Administration](admin/admin.md)**: Articles about working with Windows, Linux, AIX or other server management topics.
 * **[Development](development/development.md)**: Posts about PeopleSoft development.
 

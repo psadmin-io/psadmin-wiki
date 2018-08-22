@@ -1,7 +1,7 @@
 ---
 title: PeopleSoft Image Passwords
 layout: en
-permalink: /posts/pca/pi_passwords/
+permalink: /posts/dpk/pi_passwords/
 ---
 
 ## PeopleSoft Image Passwords

@@ -1,10 +1,10 @@
 ---
-title: Cloud Architecture
+title: Deployment Packages
 layout: en
-permalink: /posts/pca/
+permalink: /posts/dpk/
 ---
 
-The PeopleSoft Cloud Architecture section includes the following technologies:
+The Deployment Package section includes the following technologies:
 
 * Deployment Packages
 * Automated Configuration Management
