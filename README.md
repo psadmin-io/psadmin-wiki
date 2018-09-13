@@ -30,13 +30,14 @@ Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you
 1. Add file name (use underscores for spaces) with the `.md` extension.
 1. At the top of the new document, add the front-matter:
 
-        ```
-        ---
-        title: Sample Title
-        layout: en
-        permalink: /posts/folder/sample_title/
-        ---
-        ```
+    ```markdown
+    ---
+    title: Sample Title
+    layout: en
+    permalink: /posts/folder/sample_title/
+    ---
+    ```
+        
 1. Add your title to the front-matter section.
 1. Modify the `folder` and `sample_title` in the permalink section to match the folder and your filename.
 1. When you are done creating and editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
