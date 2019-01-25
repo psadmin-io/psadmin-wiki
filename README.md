@@ -15,7 +15,9 @@ On the left are folder to group the various topics related to PeopleSoft Adminst
 
 ## How to contribute with GitHub
 
-Anyone can contribute to the Communtiy Wiki. To make a contribution or edit, you can use the GitHub online editing tools to modify existing posts or create new posts.
+Anyone can contribute to the Communtiy Wiki.
+
+There are two ways to contribute: online using GitHub, or on your local machine with `git` and a text editor. 
 
 **To edit an existing document:**
 
