@@ -12,7 +12,7 @@ permalink: /posts/development/event_mapping_links/
 
 *Colton Fischer on Event Mapping*
 
-* [Blog posts about Event Mapping](http://www.peoplesoftmods.com/category/emf/)
+* [Blog posts about Event Mapping](http://www.peoplesoftmods.com/categories/#event-mapping)
 
 *Sasank Vemana on Event Mapping*
 
