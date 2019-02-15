@@ -19,6 +19,32 @@ app:        hr
 
 You can save the file as `facts.yaml`.
 
+## Ruby Facts
+
+Another option is to implement facts via Ruby. There are many locations the ruby script can live, but one option is to create a new "facts" module under the delivered `modules` directory. Create a folder structure similar to this:
+
+```
+modules
+   └───facts
+         └───lib
+              └───facter
+
+```
+
+In this directory, create a script such as `facts.rb`: 
+
+```ruby
+require 'facter'
+
+Facter.add(:application) do
+  setcode do
+    application = 'hcm'
+    application
+  end
+end    
+```
+In these scripts you can use all sorts of logic using other facts, regex, and conditionals to create facts based upon the current environment. This is just a small hardcoded example.
+   
 ## Hiera and Custom Facts
 
 In your `psft_customizations.yaml` file, you can reference these facts. For example, if you wanted your PIA domains to include the region in the name, the YAML would look like this:
