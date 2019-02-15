@@ -43,7 +43,7 @@ Facter.add(:application) do
   end
 end    
 ```
-In these scripts you can use all sorts of logic using other facts, regex, and conditionals to create facts based upon the current environment. This is just a small hardcoded example.
+In these scripts you can use all sorts of logic using other facts, regex, and conditionals to create facts based upon the current environment (such as hostname, operating system, other facts, etc). This is just a small hardcoded example.
    
 ## Hiera and Custom Facts
 
