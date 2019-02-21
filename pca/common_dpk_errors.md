@@ -6,7 +6,7 @@ permalink: /pca/common_dpk_errors/
 
 Here are some common DPK errors and how to resolve them.
 
-## `This platform is not supported`
+## This platform is not supported
 
 This error can occur when running the bootstrap script (`psft-dpk-setup`) if the `setup` folder is in the wrong location. After downloading the DPK files, you need to extract the first .zip file. Make sure the `setup` folder from the first .zip file (and other files from the .zip file) are at the same directory as the remaining .zip files. 
 
@@ -30,7 +30,7 @@ To resolve the error, move the `setup` folder (and other files in the directory)
     └── setup
 
 
-## `found character that cannot start any token while scanning for the next token`
+## found character that cannot start any token while scanning for the next token
 
 This error will display during the Puppet catalog build. The catalog build is when Puppet is performing Hiera lookups. The error can result from two common causes:
 
