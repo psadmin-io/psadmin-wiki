@@ -24,6 +24,8 @@ This page is a collection of different tools that I use to make a PS Admin's job
 
 *   [SublimeText][6] - Free to Try, $70 SublimeText is my favorite text editor. There are many editors to choose from, and I've tried lots, but I keep coming back to SublimeText. SublimeText has lots of plug-ins for editing and syntax highlighting, and is very responsive with large files. [Package Control][7] is a plug-in manager for SublimeText that makes it easy to install new plug-ins. Install Package Control when you open Sublime Text for the first time.
 
+*   [Visual Studio Code][17] - Free, Visual Studio Code is a streamlined code editor with support for development operations like debugging, task running and version control. It aims to provide just the tools a developer needs for a quick code-build-debug cycle and leaves more complex workflows to fuller featured IDEs.
+
 *   [Programmer's File Editor][8] - Free PFE has almost no modern features, but it does one thing well: it opens very large text files without any issues. Do you have 1GB trace file that needs to be searched? Use PFE.
 
 *   [SQR Express][9] - $149 SQR Express is a great editor for SQR programs. The ability to run the program within the editor is wonderful and it has useful tools for writing SQR programs.
@@ -64,3 +66,4 @@ This page is a collection of different tools that I use to make a PS Admin's job
  [14]: http://www.cedarhillsgroup.com/knowledge-base/kbarticles/introduction-to-the-datadumper-logger
  [15]: https://github.com/parasew/instiki
  [16]: https://slack.com
+ [17]: https://code.visualstudio.com/
