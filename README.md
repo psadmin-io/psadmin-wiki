@@ -17,7 +17,7 @@ On the left are folder to group the various topics related to PeopleSoft Adminst
 
 Anyone can contribute to the Communtiy Wiki.
 
-There are two ways to contribute: online using GitHub, or on your local machine with `git` and a text editor. 
+There are two ways to contribute: online using GitHub, or on your local machine with `git` and a text editor. [For a video overview on how to use Github, check it out on the main wiki site](https://wiki.psadmin.io).
 
 **To edit an existing document:**
 
