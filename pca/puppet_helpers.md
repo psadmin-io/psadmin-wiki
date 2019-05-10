@@ -30,4 +30,4 @@ When doing a lot of Hiera lookups in your YAML files, it can be tedious to type 
     "description": "Hiera Lookup Snippet"
  }
 ```
-![hiera-snippet](../images/snippet.gif "Snippet Gif")
+![hiera-snippet](../../images/snippet.gif "Snippet Gif")
