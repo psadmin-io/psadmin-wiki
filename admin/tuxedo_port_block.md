@@ -1,7 +1,7 @@
 ---
 title: Unblock Tuxedo
 layout: en
-permalink: /posts/admin/unbock_tuxedo/
+permalink: /posts/admin/unblock_tuxedo/
 ---
 
 ## Unblock Tuxedo Connection Due Failed Logins
