@@ -14,7 +14,7 @@ you should install a tool to help generate more entropy.
 
 ## haveged
 
-`haveged` is one tool to help generate entroy on Linux.
+[`haveged`](https://issihosts.com/haveged/) is one tool to help generate entroy on Linux.
 
 ```bash
 sudo rpm -Uvh https://download.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
