@@ -20,6 +20,15 @@ get-service -name psft* -computername <server or server,list> | start-service
 get-service -name psft* -computername <server or server,list> | stop-service
 ```
 
+## Change Startup Type of Service
+
+Situations sometimes arise where you need to set service startup to either `Manual`, `Automatic` or `Disabled`.  To achieve that, use  `Set-Service` command, e.g.
+
+```powershell
+# Set All PeopleSoft Services to manual startup
+Get-Service *psft* | Set-Service –StartupType 'Manual'
+```
+
 ## Delete Services
 
 Since there is no `delete-service` cmdlet, use this command to delete services by name. For each service that contains "psft", loop through the services and delete them.
@@ -28,8 +37,8 @@ Since there is no `delete-service` cmdlet, use this command to delete services b
  Get-WmiObject -Class Win32_Service | Where-Object { $_.name -like 'Psft*' } | % { $_.delete() }
 ```
 
-You can also drop into a Command Prompt and use `sc` to delete a service.
+You can also drop into a Windows Command Shell or PowerShell and use `sc.exe` to delete a service.
 
 ```powershell
-cmd /c sc delete PsftAppServerDomainAPPDOMService
+sc.exe delete PsftAppServerDomainAPPDOMService
 ```
