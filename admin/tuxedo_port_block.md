@@ -21,14 +21,14 @@ These log errors are in the TUXLOG log files.
 To view current blocked connections
 
 ```powershell
-cd %PS_CFG_HOME%
-set TUXCONFIG=%PS_CFG_HOME%\appserv\<<domain>>\PSTUXCFG
-tmadmbclist -l
+cd $env:PS_CFG_HOME
+$env:TUXCONFIG="{$env:PS_CFG_HOME}\appserv\<<domain>>\PSTUXCFG"
+cmd /c tmadmbclist -l
 ```
 
 To unblock a specifed ip address run the following  
 ```powershell
-cd %PS_CFG_HOME%
-set TUXCONFIG=%PS_CFG_HOME%\appserv\<<domain>>\PSTUXCFG
-tmadmbclist -b <<IP ADDRESS>>
+cd $env:PS_CFG_HOME
+$env:TUXCONFIG="{$env:PS_CFG_HOME}\appserv\<<domain>>\PSTUXCFG"
+cmd /c tmadmbclist -b <<IP ADDRESS>>
 ```
