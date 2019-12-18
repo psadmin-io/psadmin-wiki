@@ -22,13 +22,13 @@ To view current blocked connections
 
 ```powershell
 cd $env:PS_CFG_HOME
-$env:TUXCONFIG="{$env:PS_CFG_HOME}\appserv\<<domain>>\PSTUXCFG"
+$env:TUXCONFIG="${env:PS_CFG_HOME}\appserv\<<domain>>\PSTUXCFG"
 cmd /c tmadmbclist -l
 ```
 
 To unblock a specifed ip address run the following  
 ```powershell
 cd $env:PS_CFG_HOME
-$env:TUXCONFIG="{$env:PS_CFG_HOME}\appserv\<<domain>>\PSTUXCFG"
+$env:TUXCONFIG="${env:PS_CFG_HOME}\appserv\<<domain>>\PSTUXCFG"
 cmd /c tmadmbclist -b <<IP ADDRESS>>
 ```
