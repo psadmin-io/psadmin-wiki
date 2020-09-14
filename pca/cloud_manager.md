@@ -4,8 +4,6 @@ layout: en
 permalink: /pca/cloud_manager/
 ---
 
-# Cloud Manager Overview
-
 This page will contain an overview of PeopleSoft Cloud Manager.
 
 # DPK Files Repository
@@ -42,4 +40,37 @@ Below is an example of how Cloud Manger organizes DPK files in the Download Repo
 │       └── ...
 └── windows
     └── ...
+```
+
+# File Structure Example
+Example from a Cloud Manager deployed instance.
+
+```
+/u01/app.oracle/product
+├── db
+├── <HOSTNAME>
+|   ├── dpk
+|   │   ├── archives
+│   |   ├── pt-manifest
+|   │   ├── puppet
+|   │   └── readme.txt
+|   ├── home
+|   │   ├── esadm1
+|   │   ├── oracle2
+|   │   ├── psadm1
+|   │   ├── psadm2
+|   │   └── psadm3
+│   └── ps_cfg_home
+|           ├── appserv
+|           ├── ...
+|           └── webserv
+└── pt
+    ├── bea
+    │   ├── ...
+    │   ├── tuxedo
+    │   └── wlserver
+    ├── jdk1.8.0_241
+    ├── oracle-client
+    ├── ps_home8.58.03
+    └── tools_client
 ```
