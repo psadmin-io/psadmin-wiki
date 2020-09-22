@@ -135,7 +135,7 @@ GitHub has an excellent Pull Request (PR) feature where you can submit changes t
 1. Select `master` as the base, and `<your-branch-name>` as the compare.
 1. Click the *Create Pull Request* button submit it for review.
 1. Add a title and fill out a description of the changes you made.
-1. Click *Create Pull Request* to finish the PR.
+1. Click *Create Pull Request* to finish the PR. 
 
 After submitting the PR, the wiki branch you submitted will be pulled into a Travis-CI test build. If there are errors with the build, the results are displayed on the PR page. If the test build succeeded, the PR page will show a successful test.
 
