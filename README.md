@@ -22,7 +22,7 @@ There are two ways to contribute: online using GitHub, or on your local machine 
 **To edit an existing document:**
 
 1. Open the page in the repository and click the pencil icon. 
-1. When you are done editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive.
+1. When you are done editing the document, add a commit comment and select "Create a new branch for this commit and start a pull request." You can change the branch name to something descriptive. 
 1. Click the "Propose file change" button.
 1. On the Pull Request page, click the "Create pull request" button to submit your change for inclusion.
 
